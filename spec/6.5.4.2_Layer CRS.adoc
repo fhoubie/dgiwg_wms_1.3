@@ -1,0 +1,51 @@
+==== 6.5.4.2.          Layer CRS
+
+A Layer CRS is a horizontal coordinate reference system for the
+geographic information that serves as the source for a map. A WMS must
+support at least one CRS, and maps from multiple servers may be overlaid
+only if all the selected servers support at least one CRS in common.
+
+::
+*_Requirement 6: A DGIWG WMS server shall support the following coordinate
+reference systems:_*
+* CRS:84 WGS84 geographic longitude, then latitude, expressed in decimal degrees
+* EPSG:4326 WGS84 geographic latitude, then longitude, expressed in decimal degrees
+* EPSG:3395 World Mercator projection
+
+::
+*_Among the following Coordinate Reference Systems, the service shall
+support all those which validity zone overlaps data published by the
+service:_*
+* UTM projections over WGS84 (north zones)…  EPSG:32601 to EPSG:32660  
+* UTM projections over WGS84 (south zones)…  EPSG:32701 to EPSG:32760  
+* UPS projection over WGS84 (north zone)…  EPSG:32661  
+* UPS projection over WGS84 (south zone)…  EPSG:32761
+
+Implementation guidance:
+
+*NOTE:* Normative Reference 1, Section 7.2.4.6.6 states that: "Every
+named Layer shall have exactly one <EX_GeographicBoundingBox> element
+that is either stated explicitly or inherited from a parent Layer”.
+This is unclear in the base standard. Chapter 7.2.4.6.8 BoundingBox in
+the base standard states that: The <EX_GeographicBoundingBox> element
+(7.2.4.6.6) is conceptually similar to a BoundingBox in which the
+attribute CRS="CRS:84" is implicit. However, <EX_GeographicBoundingBox>
+shall not be used as a substitute for <BoundingBox CRS="CRS:84">. If the
+server wishes to provide bounding box information in the CRS:84 CRS,
+then a separate BoundingBox element explicitly naming CRS:84 shall be
+included in the service metadata.
+This means that Ex_GeographicBoundingBox within a DGIWG server shall
+always be in CRS="CRS:84". 
+
+Some geographic information may be available at other dimensions like
+for instance elevation or time (3D / 4D). For example, in the case of
+elevation, atmospheric information like ozone concentrations, may be
+available at different altitudes. Similarly, geographic information may
+be available at multiple times, like hourly tidal information.
+
+*NOTE:* Appropriate vertical and temporal coordinate systems have to
+be defined in the context of the particular application.
+The verticalCRSid “CRS:88” refers to the vertical CRS defined in B.6
+(elevation in meters in the North American Vertical Datum 1988). The
+unitSymbol “m” would be used. See Normative Reference 1, Annex C
+“Handling multi-dimensional data” for more information.
