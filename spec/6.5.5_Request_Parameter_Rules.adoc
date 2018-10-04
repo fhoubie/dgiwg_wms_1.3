@@ -1,0 +1,4 @@
+=== 6.5.5.    Request Parameter Rules
+
+Parameter names shall not be case sensitive, but parameter values shall
+be. Parameters in a request may be specified in any order.
