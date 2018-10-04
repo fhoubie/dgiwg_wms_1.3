@@ -1,0 +1,6 @@
+==== 6.5.5.1.          Common Request Parameters
+
+.There are three common request parameters:
+* *Version*: The VERSION parameter specifies the protocol version number.
+* *Request*: The REQUEST parameter indicates which service operation is being invoked.
+* *Format*: The FORMAT parameter specifies the output format of the response to an operation.
