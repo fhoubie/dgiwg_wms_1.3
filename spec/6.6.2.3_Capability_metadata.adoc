@@ -67,6 +67,7 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 
 NOTE: Users should be aware that changing the resolution at a range of 4 times to 0.25 times effects the accuracy of the displayed data significantly and will influence the usability of the data for certain use cases (e.g. measurements in the map).
 
+::
 ***** *Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
 
 ***** *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies**.** Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
