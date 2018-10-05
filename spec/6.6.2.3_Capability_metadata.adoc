@@ -33,9 +33,9 @@ The <Capability> element of the service metadata names the actual operations tha
 NOTE:  Additional keywords may be added to the list as appropriate to support data discovery.
 --
 ::
-** Zero or more Styles may be advertised for a Layer or collection of layers using <Style> elements, each of which shall have <Name> and <Title> elements.
-*** The style's *Name* is used in the Map request STYLES parameter.
-*** The *Title* is a human-readable string. If only a single style is available, that style is known as the “default” style and need not be advertised by the server.
+*** Zero or more Styles may be advertised for a Layer or collection of layers using <Style> elements, each of which shall have <Name> and <Title> elements.
+**** The style's *Name* is used in the Map request STYLES parameter.
+**** The *Title* is a human-readable string. If only a single style is available, that style is known as the “default” style and need not be advertised by the server.
 
 ::
 *_Requirement 13: A DGIWG WMS server shall provide information on the supported styles._*
@@ -49,12 +49,12 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ::
 *_Requirement 16: Each vector data layer's style shall have an associated legend, available as an image in one of the following formats: PNG, GIF or JPEG._*
 
-*_Recommendation 2: It is recommended to also provide legends for raster layers representing numeric data like for instance elevation or temperature data._*
+*Recommendation 2: It is recommended to also provide legends for raster layers representing numeric data like for instance elevation or temperature data.*
 
 ::
 *_Requirement 17: This legend shall be accessible online at the URL specified by LegendURL._*
 
-* *Scale denominators*: The <MinScaleDenominator> and <MaxScaleDenominator> elements define the range of scales for which it is appropriate to generate a map of a Layer.
+*** *Scale denominators*: The <MinScaleDenominator> and <MaxScaleDenominator> elements define the range of scales for which it is appropriate to generate a map of a Layer.
 
 ::
 *_Requirement 18: A DGIWG WMS server shall provide scale denominators for all layers it provides._*
@@ -62,60 +62,48 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ::
 _*Requirement 19: The <MinScaleDenominator> value shall always be less than or equal to the <MaxScaleDenominator> value.*_
 
-*_Recommendation 4: A DGIWG WMS service should be configured to serve requests that range from at least 4x to at least 0.25x the native scale(s) or resolution(s) of the underlying datasets"._*
+*Recommendation 4: A DGIWG WMS service should be configured to serve requests that range from at least 4x to at least 0.25x the native scale(s) or resolution(s) of the underlying datasets".*
 
 NOTE: Users should be aware that changing the resolution at a range of 4 times to 0.25 times effects the accuracy of the displayed data significantly and will influence the usability of the data for certain use cases (e.g. measurements in the map).
 
-* ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-*Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-* _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-*MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies**.** Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
-_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+*** *Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
+*** *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies**.** Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
 
-Recommendation 5: In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server.
+*Recommendation 5: In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server.*
 
-* FeatureListURL: A server may use a <FeatureListURL> element to point to a list of the features represented in a Layer. The enclosed Format element indicates the file format MIME type of the feature list.
+*** FeatureListURL: A server may use a <FeatureListURL> element to point to a list of the features represented in a Layer. The enclosed Format element indicates the file format MIME type of the feature list.
 
+::
 _*Requirement*_ _*20: If the GetCapabilities document identifies support for FeatureListURL then the list of features that are in the particular layer shall be resolvable through the provided URL.*_
 
-* DataURL: A server may use DataURL to offer a link to the underlying data represented by a particular layer. The enclosed Format element indicates the file format MIME type of the data file.
+*** DataURL: A server may use DataURL to offer a link to the underlying data represented by a particular layer. The enclosed Format element indicates the file format MIME type of the data file.
 
+::
 _*Requirement*_ _*21: If the GetCapabilities document identifies support for DataURL then the underlying data of the particular layer shall be resolvable through the provided URL.*_
 
-* _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-*Layer attributes:* A <Layer> may have zero or more of the following XML attributes: queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight. All of these attributes are optional and default to 0. The meaning of each attribute is summarized in Table 4
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+** *Layer attributes:* A <Layer> may have zero or more of the following XML attributes: queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight. All of these attributes are optional and default to 0. The meaning of each attribute is summarized in Table 4
 
 [cols=",,,",options="header",]
 |========================================================================================
-|*Attribute * a|
-*OGC*
+|*Attribute* 
 
-*allowed values*
+a| *OGC* *allowed values*
 
- a|
-*DGIWG*
+|*DGIWG* *allowed values* 
 
-*allowed values*
+|*Meaning (0 is default value)*
+|*queryable* 
 
- |*Meaning (0 is default value)*
-|*queryable * a|
-0, false,
+a|0, false,
 
-1, true
+1, true a
+|0, false,1, 
 
- a|
-0, false,
-
-1, true
-
- a|
-0, false: layer is not queryable.
+true a| 0, false: layer is not queryable. 
 
 1, true: layer is queryable.
 
-|*cascaded * |0, positive integer a|
+|*cascaded* |0, positive integer a|
 0,
 
 positive integer
