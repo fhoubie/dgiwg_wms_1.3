@@ -52,7 +52,7 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ::
 *_Requirement 16: Each vector data layer's style shall have an associated legend, available as an image in one of the following formats: PNG, GIF or JPEG._*
 
-*Recommendation 2: It is recommended to also provide legends for raster layers representing numeric data like for instance elevation or temperature data.*
+*Recommendation 2: _It is recommended to also provide legends for raster layers representing numeric data like for instance elevation or temperature data._*
 
 ::
 *_Requirement 17: This legend shall be accessible online at the URL specified by LegendURL._*
