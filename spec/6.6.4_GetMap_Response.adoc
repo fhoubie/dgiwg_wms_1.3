@@ -1,0 +1,3 @@
+=== GetMap Response
+
+The response to a valid GetMap request shall be a map of the spatially referenced information layer requested, in the desired style, and having the specified coordinate reference system, bounding box, size, format and transparency.
