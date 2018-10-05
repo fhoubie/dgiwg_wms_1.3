@@ -74,6 +74,7 @@ NOTE: Users should be aware that changing the resolution at a range of 4 times t
 
 *Recommendation 5: In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server.*
 
+::
 *** FeatureListURL: A server may use a <FeatureListURL> element to point to a list of the features represented in a Layer. The enclosed Format element indicates the file format MIME type of the feature list.  
   
 -- 
