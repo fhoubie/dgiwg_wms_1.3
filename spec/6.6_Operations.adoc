@@ -1,0 +1,6 @@
+==  6.6  Operations
+
+.The WMS Interface offers 3 Operations.
+* GetCapabilities (mandatory): Allows for obtaining Service Metadata
+* GetMap (mandatory): Returns a map
+* GetFeatureInfo (optional): Provides additional information about features in the pictures of maps that were returned by previous GetMap requests
