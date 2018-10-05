@@ -1,0 +1,35 @@
+=== GetFeatureInfo Operation Request
+
+GetFeatureInfo is an optional operation. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. A client shall not issue a GetFeatureInfo request for other layers. A WMS shall respond with a properly formatted service exception (XML) response (code = OperationNotSupported) if it receives a GetFeatureInfo request but does not support it.
+
+The GetFeatureInfo operation is designed to provide clients of a WMS with more information about features in the pictures of maps that were returned by previous Map requests. The canonical use case for GetFeatureInfo is that a user sees the response of a Map request and chooses a point (I,J) on that map for which to obtain more information. The basic operation provides the ability for a client to specify which pixel is being asked about, which layer(s) should be investigated, and what format the information should be returned in.
+
+Because the WMS protocol is stateless, the GetFeatureInfo request indicates to the WMS what map the user is viewing by including most of the original GetMap request parameters (all but VERSION and REQUEST). From the spatial context information (BBOX, CRS, WIDTH, HEIGHT) in that GetMap request, along with the I,J position the user chose, the WMS can (possibly) return additional information about that position.
+
+The parameters of a GetFeatureInfo request are listed in Table 6.
+
+[cols=",,,",options="header",]
+|=================================================================================================================================================================
+|*Request Parameter* a|
+*OGC*
+
+*Mandatory/ Optional*
+
+ a|
+*DGIWG *
+
+*Mandatory/ Optional*
+
+ |*Description*
+|*VERSION=1.3.0* |M |M |Request version.
+|*REQUEST=GetFeatureInfo* |M |M |Request name.
+|*map request part* |M |M |Partial copy of the Map request parameters that generated the map for which information is desired.
+|*QUERY_LAYERS=layer_list* |M |M |Comma-separated list of one or more layers to be queried.
+|*INFO_FORMAT=output_format* |M |M |Return format of feature information (MIME type).
+|*FEATURE_COUNT=number* |O |M |Number of features about which to return information (default=1).
+|*I=pixel_column* |M |M |_i_ coordinate in pixels of feature in Map CS.
+|*J=pixel_row* |M |M |_j_ coordinate in pixels of feature in Map CS.
+|*EXCEPTIONS=exception_format* |O |M |The format in which exceptions are to be reported by the WMS (default= XML). Support of text/xml and text/html is mandatory.
+|=================================================================================================================================================================
+
+[[_Ref371059516]]Table 6: GetFeatureInfo Request parameters
