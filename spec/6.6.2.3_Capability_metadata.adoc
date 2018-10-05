@@ -32,10 +32,11 @@ The <Capability> element of the service metadata names the actual operations tha
 [Note]
 NOTE:  Additional keywords may be added to the list as appropriate to support data discovery.
 --
+
 ::
-*** Zero or more Styles may be advertised for a Layer or collection of layers using <Style> elements, each of which shall have <Name> and <Title> elements.
-**** The style's *Name* is used in the Map request STYLES parameter.
-**** The *Title* is a human-readable string. If only a single style is available, that style is known as the “default” style and need not be advertised by the server.
+**** Zero or more Styles may be advertised for a Layer or collection of layers using <Style> elements, each of which shall have <Name> and <Title> elements.
+***** The style's *Name* is used in the Map request STYLES parameter.
+***** The *Title* is a human-readable string. If only a single style is available, that style is known as the “default” style and need not be advertised by the server.
 
 ::
 *_Requirement 13: A DGIWG WMS server shall provide information on the supported styles._*
@@ -44,7 +45,7 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ::
 *_Requirement 15: The MaxWidth and MaxHeight shall be greater or equal to 800 pixels._*
 
-* <LegendURL> contains the location of an image of a map legend appropriate to the enclosing style.
+***** <LegendURL> contains the location of an image of a map legend appropriate to the enclosing style.
 
 ::
 *_Requirement 16: Each vector data layer's style shall have an associated legend, available as an image in one of the following formats: PNG, GIF or JPEG._*
@@ -54,7 +55,7 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ::
 *_Requirement 17: This legend shall be accessible online at the URL specified by LegendURL._*
 
-*** *Scale denominators*: The <MinScaleDenominator> and <MaxScaleDenominator> elements define the range of scales for which it is appropriate to generate a map of a Layer.
+***** *Scale denominators*: The <MinScaleDenominator> and <MaxScaleDenominator> elements define the range of scales for which it is appropriate to generate a map of a Layer.
 
 ::
 *_Requirement 18: A DGIWG WMS server shall provide scale denominators for all layers it provides._*
@@ -66,8 +67,9 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 
 NOTE: Users should be aware that changing the resolution at a range of 4 times to 0.25 times effects the accuracy of the displayed data significantly and will influence the usability of the data for certain use cases (e.g. measurements in the map).
 
-*** *Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
-*** *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies**.** Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
+***** *Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
+
+***** *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies**.** Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
 
 *Recommendation 5: In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server.*
 
