@@ -1,0 +1,15 @@
+==== 6.6.2.2  General service metadata
+
+The first part of the service metadata is a <Service> element providing general metadata for the server as a whole. It shall include a Name, Title, and Online Resource URL. Optional service metadata includes Abstract, Keyword List, Contact Information, Fees, Access Constraints, and limits the number of layers in a request or the output size of maps.
+
+::
+*_Requirement 9: A DGIWG WMS server shall provide all mandatory and optional service metadata elements._*
+
+The optional <LayerLimit> element in the service metadata is a positive integer indicating the maximum number of layers a client is permitted to include in a single GetMap request. If this element is absent, the server imposes no limit.
+
+The elements <Fees> and <AccessConstraints> may be omitted in an OGC WMS if they do not apply to the server. If either of those elements is present, the reserved word "none" (case-insensitive) shall be used if there are no fees or access constraints, as follows: <Fees>none</Fees>, <AccessConstraints>none</AccessConstraints>.
+
+In a DGIWG WMS server the AccessConstraints element shall always be used. In an NATO environment, the common NATO classification scheme has to be applied (see Normative Reference^[3]^ DMF chapter 5.6.1.4 Classification Level Codelist).
+
+::
+*_Requirement 10: A DGIWG WMS server shall identify the highest classification level of the content accessible through the WMS service by populating the wms:AccessConstraints element._*
