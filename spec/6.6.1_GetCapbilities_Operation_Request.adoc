@@ -12,7 +12,7 @@ The purpose of the mandatory GetCapabilities operation is to obtain service meta
 |*UPDATESEQUENCE=string* | O |Sequence number or string for cache control
 |=======================================================================
 
-Table 3: The parameters of a GetCapabilities request URL as per Normative Reference [1]
+Table 3: The parameters of a GetCapabilities request URL as per Normative Reference ^[1]^
 
 ::
 *_Requirement 8: A DGIWG WMS server shall support all GetCapabilities request parameters._*
