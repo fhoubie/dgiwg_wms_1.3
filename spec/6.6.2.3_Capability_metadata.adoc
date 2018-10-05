@@ -42,9 +42,11 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 *_Requirement 13: A DGIWG WMS server shall provide information on the supported styles._*
 ::
 *_Requirement 14: A DGIWG WMS server shall always provide at least one style element and that style shall be advertised even if it's only the default style._*
+
 ::
 *_Requirement 15: The MaxWidth and MaxHeight shall be greater or equal to 800 pixels._*
 
+::
 ***** <LegendURL> contains the location of an image of a map legend appropriate to the enclosing style.
 
 ::
