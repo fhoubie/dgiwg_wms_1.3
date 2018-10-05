@@ -1,0 +1,3 @@
+==== Version
+
+The VERSION parameter is mandatory. The value “1.3.0” shall be used for GetFeatureInfo requests that comply with ISO 19128:2005.
