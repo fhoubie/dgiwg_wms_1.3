@@ -36,23 +36,24 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ** Zero or more Styles may be advertised for a Layer or collection of layers using <Style> elements, each of which shall have <Name> and <Title> elements.
 *** The style's *Name* is used in the Map request STYLES parameter.
 *** The *Title* is a human-readable string. If only a single style is available, that style is known as the “default” style and need not be advertised by the server.
-_________________________________________________________________________________________________________________________________________________________________
 
-_*Requirement*_ _*13: A DGIWG WMS server shall provide information on the supported styles.*_
+::
+*_Requirement 13: A DGIWG WMS server shall provide information on the supported styles._*
+::
+*_Requirement 14: A DGIWG WMS server shall always provide at least one style element and that style shall be advertised even if it's only the default style._*
+::
+*_Requirement 15: The MaxWidth and MaxHeight shall be greater or equal to 800 pixels._*
 
-_*Requirement*_ _*14: A DGIWG WMS server shall always provide at least one style element and that style shall be advertised even if it's only the default style.*_
+* <LegendURL> contains the location of an image of a map legend appropriate to the enclosing style.
 
-_*Requirement*_ _*15: The MaxWidth and MaxHeight shall be greater or equal to 800 pixels.*_
+::
+*_Requirement 16: Each vector data layer's style shall have an associated legend, available as an image in one of the following formats: PNG, GIF or JPEG._*
 
-* _________________________________________________________________________________________________
-<LegendURL> contains the location of an image of a map legend appropriate to the enclosing style.
-_________________________________________________________________________________________________
+::
+*_Recommendation 2: It is recommended to also provide legends for raster layers representing numeric data like for instance elevation or temperature data._*
 
-_*Requirement*_ _*16: Each vector data layer's style shall have an associated legend, available as an image in one of the following formats: PNG, GIF or JPEG. *_
-
-Recommendation 2: It is recommended to also provide legends for raster layers representing numeric data like for instance elevation or temperature data
-
-_*Requirement*_ _*17: This legend shall be accessible online at the URL specified by LegendURL.*_
+::
+*Requirement*_ _*17: This legend shall be accessible online at the URL specified by LegendURL.*_
 
 * _______________________________________________________________________________________________________________________________________________________________________
 *Scale denominators*: The <MinScaleDenominator> and <MaxScaleDenominator> elements define the range of scales for which it is appropriate to generate a map of a Layer.
