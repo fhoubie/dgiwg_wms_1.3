@@ -65,16 +65,16 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 ::
 *_Requirement 19: The <MinScaleDenominator> value shall always be less than or equal to the <MaxScaleDenominator> value._*
 
-*Recommendation 4: A DGIWG WMS service should be configured to serve requests that range from at least 4x to at least 0.25x the native scale(s) or resolution(s) of the underlying datasets".*
+*Recommendation 4: _A DGIWG WMS service should be configured to serve requests that range from at least 4x to at least 0.25x the native scale(s) or resolution(s) of the underlying datasets._*
 
 NOTE: Users should be aware that changing the resolution at a range of 4 times to 0.25 times effects the accuracy of the displayed data significantly and will influence the usability of the data for certain use cases (e.g. measurements in the map).
 
 ::
 ***** *Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
 
-***** *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies**.** Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
+***** *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies. Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
 
-*Recommendation 5: In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server.*
+*Recommendation 5: _In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server._*
 
 ::
 *** FeatureListURL: A server may use a <FeatureListURL> element to point to a list of the features represented in a Layer. The enclosed Format element indicates the file format MIME type of the feature list.  
@@ -173,7 +173,7 @@ nonzero: value is fixed map height that cannot be changed by the WMS.
 *_Table 4: Layer attributes_*
 
 ::
-*_Requirement 22: A DGIWG WMS server shall provide the Layer Attributes according to Table 4.__*
+*_Requirement 22: A DGIWG WMS server shall provide the Layer Attributes according to Table 4._*
 
 *Recommendation 6: _A DGIWG WMS server offering vector layers should be queryable_*
 
