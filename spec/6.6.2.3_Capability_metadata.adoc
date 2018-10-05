@@ -103,7 +103,9 @@ true a| 0, false: layer is not queryable.
 
 1, true: layer is queryable.
 
-|*cascaded* |0, positive integer a|
+|*cascaded* |0, 
+
+positive integer a|
 0,
 
 positive integer
@@ -160,11 +162,12 @@ nonzero: value is fixed map height that cannot be changed by the WMS.
 
 |========================================================================================
 
-Table 4: Layer attributes
+*_Table 4: Layer attributes_*
 
+::
 *_Requirement 22: A DGIWG WMS server shall provide the Layer Attributes according to Table 4.__*
 
-*_Recommendation* *6:* _*A DGIWG WMS server offering vector layers should be queryable_*
+*Recommendation 6: _A DGIWG WMS server offering vector layers should be queryable_*
 
 The Layer metadata may also include three optional attributes that indicate a map server that is less functional than a normal WMS, because it is not able to extract a subset of a larger dataset or because it only serves maps of a fixed size and cannot resize them.
 
