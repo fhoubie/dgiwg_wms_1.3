@@ -1,0 +1,18 @@
+=== 6.6.1  GetCapabilities Operation Request
+
+The purpose of the mandatory GetCapabilities operation is to obtain service metadata, which is a machine readable (and human-readable) description of the server’s information content and acceptable request parameter values. Table 3 lists the GetCapabilities request parameters.
+
+[cols=",,",options="header",]
+|=======================================================================
+|*Request Parameter* a|*OGC* *Mandatory/Optional*  |*Description*
+|*VERSION=version* |O |Request version
+|*SERVICE=WMS* |M |Service type (WMS)
+|*REQUEST=GetCapabilities* |M |Request name (GetCapabilities)
+|*FORMAT=MIME_type* |O |Output format of service metadata (text/xml)
+|*UPDATESEQUENCE=string* |O |Sequence number or string for cache control
+|=======================================================================
+
+Table 3: The parameters of a GetCapabilities request URL as per Normative Reference [1]
+
+::
+*_Requirement 8: A DGIWG WMS server shall support all GetCapabilities request parameters._*
