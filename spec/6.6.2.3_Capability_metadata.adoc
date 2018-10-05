@@ -60,7 +60,7 @@ NOTE:  Additional keywords may be added to the list as appropriate to support da
 *_Requirement 18: A DGIWG WMS server shall provide scale denominators for all layers it provides._*
 
 ::
-_*Requirement 19: The <MinScaleDenominator> value shall always be less than or equal to the <MaxScaleDenominator> value.*_
+*_Requirement 19: The <MinScaleDenominator> value shall always be less than or equal to the <MaxScaleDenominator> value._*
 
 *Recommendation 4: A DGIWG WMS service should be configured to serve requests that range from at least 4x to at least 0.25x the native scale(s) or resolution(s) of the underlying datasets".*
 
@@ -74,14 +74,14 @@ NOTE: Users should be aware that changing the resolution at a range of 4 times t
 *** FeatureListURL: A server may use a <FeatureListURL> element to point to a list of the features represented in a Layer. The enclosed Format element indicates the file format MIME type of the feature list.
 
 ::
-_*Requirement*_ _*20: If the GetCapabilities document identifies support for FeatureListURL then the list of features that are in the particular layer shall be resolvable through the provided URL.*_
+_*Requirement 20: If the GetCapabilities document identifies support for FeatureListURL then the list of features that are in the particular layer shall be resolvable through the provided URL.*_
 
 *** DataURL: A server may use DataURL to offer a link to the underlying data represented by a particular layer. The enclosed Format element indicates the file format MIME type of the data file.
 
 ::
-_*Requirement*_ _*21: If the GetCapabilities document identifies support for DataURL then the underlying data of the particular layer shall be resolvable through the provided URL.*_
+_*Requirement 21: If the GetCapabilities document identifies support for DataURL then the underlying data of the particular layer shall be resolvable through the provided URL.*_
 
-** *Layer attributes:* A <Layer> may have zero or more of the following XML attributes: queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight. All of these attributes are optional and default to 0. The meaning of each attribute is summarized in Table 4
+*** *Layer attributes:* A <Layer> may have zero or more of the following XML attributes: queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight. All of these attributes are optional and default to 0. The meaning of each attribute is summarized in Table 4
 
 [cols=",,,",options="header",]
 |========================================================================================
