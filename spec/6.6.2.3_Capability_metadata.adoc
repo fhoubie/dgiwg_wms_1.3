@@ -75,13 +75,13 @@ NOTE: Users should be aware that changing the resolution at a range of 4 times t
   
 -- 
 ::
-_*Requirement 20: If the GetCapabilities document identifies support for FeatureListURL then the list of features that are in the particular layer shall be resolvable through the provided URL.*_
+*_Requirement 20: If the GetCapabilities document identifies support for FeatureListURL then the list of features that are in the particular layer shall be resolvable through the provided URL._*
 
 *** DataURL: A server may use DataURL to offer a link to the underlying data represented by a particular layer. The enclosed Format element indicates the file format MIME type of the data file.  
   
 --  
 ::
-_*Requirement 21: If the GetCapabilities document identifies support for DataURL then the underlying data of the particular layer shall be resolvable through the provided URL.*_
+*_Requirement 21: If the GetCapabilities document identifies support for DataURL then the underlying data of the particular layer shall be resolvable through the provided URL._*
 
 *** *Layer attributes:* A <Layer> may have zero or more of the following XML attributes: queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight. All of these attributes are optional and default to 0. The meaning of each attribute is summarized in Table 4
 
