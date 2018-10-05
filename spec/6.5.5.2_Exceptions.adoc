@@ -1,0 +1,6 @@
+==== 6.5.5.2  Exceptions
+
+The EXCEPTIONS request parameter states the format in which to report errors.
+
+::
+*_Requirement_* *_7: A DGIWG WMS server shall provide service exceptions in English language._*
