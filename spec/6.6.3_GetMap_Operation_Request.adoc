@@ -1,0 +1,92 @@
+===  6.6.3  GetMap Operation Request
+
+The GetMap operation returns a map. Upon receiving a GetMap request, a WMS shall either satisfy the request or issue a service exception. Table 5 lists the parameters of a GetMap request.
+
+[cols=",,,",options="header",]
+|================================================================================================================
+|*Request Parameter* a|
+*OGC*
+
+*Mandatory/Optional*
+
+ a|
+*DGIWG*
+
+*Mandatory/*
+
+*Optional/ Conditional*
+
+|*Description*
+|*VERSION=1.3.0* |M |M |Request version.
+|*REQUEST=GetMap* |M |M |Request name.
+|*LAYERS=layer_list* |M |M |Comma-separated list of one or more map layers.
+|*STYLES=style_list* |M |M |Comma-separated list of one rendering style per requested layer.
+|*CRS=namespace:identifier* |M |M |Coordinate reference system.
+|*BBOX=minx,miny,maxx,maxy* |M |M |Bounding box corners (lower left, upper right) in CRS units.
+|*WIDTH=output_width* |M |M |Width in pixels of map picture.
+|*HEIGHT=output_height* |M |M |Height in pixels of map picture.
+|*FORMAT=output_format* |M |M |Output format of map.
+|*TRANSPARENT=TRUE/FALSE* |O |C |Background transparency of map (default=FALSE).
+|*BGCOLOR=color_value* |O |O |Hexadecimal red-green-blue color value for the background color (default=0xFFFFFF).
+|*EXCEPTIONS=exception_format* |O |M |The format in which exceptions are to be reported by the WMS (default=XML).
+|*TIME=time* |O |C |Time value of layer desired.
+|*ELEVATION=elevation* |O |C |Elevation of layer desired.
+|*Other sample dimension(s)* |O |C |Value of other dimensions as appropriate.
+|================================================================================================================
+
+Table 5: GetMap request parameters
+
+::
+*_Requirement 23: A DGIWG WMS server shall support all GetMap request parameters._*
+
+*** *Styles:* The mandatory STYLES parameter lists the style in which each layer is to be rendered.
+*** *Width, Height:* The mandatory WIDTH and HEIGHT parameters specify the size in integer pixels of the map to be produced.
+*** *TRANSPARENT:* The optional TRANSPARENT parameter specifies whether the map background is to be made transparent or not. TRANSPARENT can take on two values, "TRUE" or "FALSE". The default value is FALSE if this parameter is absent from the request.
+
+--
+
+::
+*_Requirement 24: A DGIWG WMS Service shall support transparency._*
+
+--
+
+::
+*_Requirement 25: A DGIWG WMS server shall support the INIMAGE EXCEPTIONS._*  +
+
+::
+*_Requirement 26: A DGIWG WMS server shall support the BLANK EXCEPTIONS._*
+
+** *EXCEPTIONS:* The optional EXCEPTIONS parameter defines the format of an error message. XML is mandatory and the default format for exceptions.
+
+*** INIMAGE: If the EXCEPTIONS parameter is set to INIMAGE, the WMS shall, upon detecting an error, return an object of the MIME type specified in the FORMAT parameter whose content includes text describing the nature of the error. In the case of a picture format, the error message shall be drawn on the returned picture. In the case of a graphic element format, the text of the error message shall be rendered in the manner that text is normally represented in that format.
+
+*** BLANK: If the EXCEPTIONS parameter is set to BLANK, the WMS shall, upon detecting an error, return an object of the type specified in FORMAT whose content is uniformly “off”. In the case of a picture format, that response shall be an image containing only pixels of one color (the background color). In the case of a picture format supporting transparency, if TRANSPARENT=TRUE is specified the pixels shall all be transparent. In the case of a graphic element output format, no visible graphic elements shall be included in the response output.
+
+::
+*_Requirement 27: If a DGIWG WMS server provides multi-dimensional data then it shall:_*
+
+*** *_Support the vertical Elevation and temporal Time request parameters._*
+
+*** *_Handle data utilized in these parameters in accordance with the "OGC Best Practices for using OGC WMS with Time-Dependent or Elevation-Dependent Data^[2]^"_*  +
+
+*Time, Elevation, Other sample dimensions:* An example would be the request for a single ozone map at specified time and height:  +
+
+Example: 
+
+::
+_http://ageobwserver.org/...?VERSION=1.3.0&REQUEST=GetMap&CRS=CRS:84&BBOX=-180,-90,180,90&WIDTH=600&HEIGHT=300&LAYERS=ozone&TIME=2000-08-03&ELEVATION=1000&FORMAT=image/gif_
+
+
+*NOTE:* Conformant WMS servers should express the values of the time dimension either as one time interval with non-zero resolution when the temporal dependency of the data is time instants or as a comma separated list of timestamps.
+
+The WMS 1.3 specification allows the possibility to define multiple times as several triplets: start/end/interval. The triplets define sets of time instants that may overlap. It is difficult for a human reader to determine the allowed times of the time dimension. Hence, the time dimension should not be specified as a list of triplets, except if the time instants are regularly spaced with a unique interval of time. If not the time instance should be specified as a comma separated list.
+
+::
+*_Requirement 28: A DGIWG WMS server that announces available sample dimensions in its service metadata shall resolve the corresponding parameters provided in the GetMap operation for requesting these dimensional values._*
+
+Example:
+
+::
+_A WMS Layer is described as having an extent along a dimension named “wavelength” as follows:_
+
+_<Dimension name="wavelength" units="Angstrom" unitSymbol="Ao">3000,4000,5000,6000<Dimension>.A GetMap request for a portrayal of the data at 4000 Angstroms would include the parameter “DIM_WAVELENGTH=4000”._
