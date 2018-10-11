@@ -1,7 +1,7 @@
 # Using GitHub for comments
 
 ## Overview
-The Defense Geospaital Information Working Group IDGIWG intends to experiment with the use of GitHub as a collaboration platform, and the document formats suppored by GitHub as a way to evolve the specification editing and public comment process. The versions of draft specifications in GitHub, in whole or in part, should not be considered official positions of the DGIWG as an organization. Official specifications will be published on the DGIWG Portal and Home Page.
+The Defense Geospatial Information Working Group (DGIWG) intends to experiment with the use of GitHub as a collaboration platform, and the document formats suppored by GitHub as a way to evolve the specification editing and public comment process. The versions of draft specifications in GitHub, in whole or in part, should not be considered official positions of the DGIWG as an organization. Official specifications will be published on the DGIWG Portal and Home Page.
   
 ## Comments
 
@@ -90,4 +90,30 @@ provides detailed instructions on how to do this.
   - Tickets with lots of comments that aren't resolved are discussed in the meetings. Ideally with an owner assigned to change the PR to reflect the consensus of the group.
   - Tickets with lots of +1's should be moved through quickly, basically most all the 'homework' should be done before the teleconference, telecons are just used to discuss open issues and ratify the +1's in the ticket.
   - An 'editor' either merges the pull request or post the official rejection comment, and closes the ticket.
+
+## Tools
+
+* https://atom.io/[Atom]  
+** pretty-json
+** xml-formatter
+
+* https://asciidoctor.org/[asciidoctor]
+* asciidoctor-pdf
+* https://pandoc.org/[pandoc]
+
+## Workflow
+
+Convert MS Word documents to asciidoc files, use https://pandoc.org/[pandoc]
+
+pandoc --from=docx --to=asciidoc --wrap=none --atx-headers --normalize --extract-media=extracted-media inputdocument.docx > outputdocument.adoc
+
+Convert the asciidoc files to HTML by running this command from the Terminal:
+
+asciidoctor -r asciidoctor-bibtex  --safe -o outputdocument.html inputdocument.adoc
+
+Also, install asciidoctor-bibtex to automatically manage the bibliography and citations.
+
+To convert to PDF, install asciidoctor-pdf . This allows the convertion of the asciidoc files to PDF by running the command:
+
+asciidoctor-pdf -r asciidoctor-bibtex  --safe -o outputdocument.pdf inputdocument.adoc
 
