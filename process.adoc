@@ -10,9 +10,9 @@ Comments on the specifications can be made in one of two ways:
 1. Pull Requests (PRs) that contain the proposed changes to the document, with a comment from the author. These should have a label for the priority. (preferred) 
   * Pull Requests be made for each logical set of changes to the spec, against a user's branch, not their master. Pull Requests that do too many things at once will be rejected and the submitter will be asked to break it up in to multiple pull requests.
   * Submitters should only change their pull requests in dialog with the Technical Panel Chair/POC. In other words after submitting they should not modify their request at all unless asked to by the TP Chair.
-1. If the comment is of a more general nature then [create a new 'issue'](https://github.com/DGIWG/dgiwg_wms_1.3/issues) in the standard GitHub repo issue tracker, with proper labeling as well as a comment on what section of the spec it applies to.
+1. If the comment is of a more general nature then https://github.com/DGIWG/dgiwg_wms_1.3/issues[create a new 'issue'] in the standard GitHub repo issue tracker, with proper labeling as well as a comment on what section of the spec it applies to.
 
-You can review and comment on submitted [pull requests](https://github.com/DGIWG/dgiwg_wms_1.3/pulls) and [issues](https://github.com/DGIWG/dgiwg_wms_1.3/issues)
+You can review and comment on submitted https://github.com/DGIWG/dgiwg_wms_1.3/pulls[pull requests] and https://github.com/DGIWG/dgiwg_wms_1.3/issues[issues]
 
 No need to assign a milestone, the TP Chair/POC will reviews PR and issues, and assign them to the appropriate milestone if they are valid.
 
@@ -32,13 +32,13 @@ You can just hit 'edit' on any of the specification pages. This will automatical
 'fork' the repository in to your own copy. You can also create a fork before editing by hitting the 'Fork' button
 at the top right of this page. This creates a personal copy of the geopackage specification repository (a fork). 
 You can find more detailed instructions on forking a repo on the 
-[Fork A Repo](https://help.github.com/articles/fork-a-repo) page.
+https://help.github.com/articles/fork-a-repo[Fork A Repo] page.
 
-To edit the document we are using [Markdown](http://daringfireball.net/projects/markdown/), with 
-[GitHub's extensions](http://github.github.com/github-flavored-markdown/). For quick hints on markdown this
-[cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be quite helpful.
+To edit the document we are using http://daringfireball.net/projects/markdown/[Markdown], with 
+http://github.github.com/github-flavored-markdown/[GitHub's extensions]. For quick hints on markdown this
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet[cheat sheet] can be quite helpful.
 
-After editing there you can create a '[pull request](https://help.github.com/articles/creating-a-pull-request)' 
+After editing there you can create a 'https://help.github.com/articles/creating-a-pull-request[pull request]' 
 from your fork to submit the work for review and merging. You just hit 'compare and review' from your own 
 version of the repository, or any branch in it, and then can click to create a pull request right there.
 
@@ -49,7 +49,7 @@ you make more changes based on feedback then all changes can get pulled in when 
 Note you can create new branches as well as new files completely through the web. You can even create new
 directories:
 
-![creating directories](http://i.stack.imgur.com/n3Wg3.gif)
+!http://i.stack.imgur.com/n3Wg3.gif[creating directories]
 
 If there is anything that you need to do with git, but you aren't comfortable with using it and don't want to
 learn it, then just create an issue and someone will certainly be able to assist.
@@ -63,7 +63,7 @@ For instance, after creating your fork of the geopackage repository you will nee
 The URL of your fork will be https://github.com/username/geopackage.git where username should be replaced by 
 your github username. Cloning the repository can be done using the git command-line client 
 (git clone https://github.com/username/geopackage.git) or using a git GUI like the GitHub 
-[Windows](http://windows.github.com/) or [Mac](http://mac.github.com/) or [SourceTree](http://sourcetreeapp.com/).
+http://windows.github.com/[Windows] or http://mac.github.com/[Mac] or http://sourcetreeapp.com/[SourceTree].
 
 Once the repository has been cloned to your computer you can make the changes to the specification that 
 you would like to suggest. Many text editors have plugins for formatting and previewing Markdown.
