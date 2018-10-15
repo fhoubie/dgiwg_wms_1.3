@@ -1,0 +1,12 @@
+=== DGIWG WMS Binding
+
+a.  Test Purpose: Verify that a DGIWG WMS server supports HTTP Get requests (DGIWG Requirement 2).  +
+
+b.  Test Methods:
+::
+1.  Submit HTTP Get GetCapabilities request and verify that the server is providing a proper response.
+2.  Submit HTTP Get GetMap request and verify that the server is providing a proper response.  +
+
+c.  References: Clauses 6.5.2  +
+
+d.  Test Type: Capability  +
