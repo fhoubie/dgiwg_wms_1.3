@@ -1,0 +1,3 @@
+==== INFO_FORMAT
+
+The mandatory INFO_FORMAT parameter indicates what format to use when returning the feature information.
