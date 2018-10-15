@@ -1,0 +1,9 @@
+=== DGIWG WMS GetFeatureInfo Response
+
+a)  Test Purpose: Verify that a DGIWG WMS interface satisfies all requirements for the operation GetFeatureInfo (DGIWG Requirement 31).
+
+b)  Test Method: Submit a GetFeatureInfo request from the client and verify that an appropriate response is returned according to the requested INFO_Format.
+
+c)  References: Clauses 6.6.6
+
+d)  Test Type: Capability
