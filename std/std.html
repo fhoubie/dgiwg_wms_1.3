@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.7.1">
+<title>Defence Profile of OGC's Web Processing Service 2.0</title>
+<link rel="stylesheet" href="resources/stylesheets/dgiwg.css">
+<link rel="stylesheet" href="resources/stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#_dgiwg_xxx_defence_profile_of_ogcs_web_processing_service_2_0">DGIWG – xxx + Defence Profile of OGC's Web Processing Service 2.0</a>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a></li>
+<li><a href="#_scope">2. Scope</a></li>
+<li><a href="#_conformance">3. Conformance</a>
+<ul class="sectlevel2">
+<li><a href="#_conformance_classes">3.1. Conformance classes</a></li>
+<li><a href="#_backward_compatibility">3.2. Backward compatibility</a></li>
+</ul>
+</li>
+<li><a href="#_references">4. References</a>
+<ul class="sectlevel2">
+<li><a href="#_normative_references">4.1. Normative references</a></li>
+<li><a href="#_informative_references">4.2. Informative references</a></li>
+</ul>
+</li>
+<li><a href="#_terms_definitions_and_abbreviations">5. Terms, definitions, and abbreviations</a>
+<ul class="sectlevel2">
+<li><a href="#_definitions">5.1. Definitions</a></li>
+<li><a href="#_abrevations">5.2. Abrevations</a></li>
+</ul>
+</li>
+<li><a href="#_wps_2_0_presentation">6. WPS 2.0 presentation</a>
+<ul class="sectlevel2">
+<li><a href="#_subchapter_1">6.1. Subchapter 1</a></li>
+<li><a href="#_subchapter_2">6.2. Subchapter 2</a></li>
+</ul>
+</li>
+<li><a href="#_subject_matter_content">7. Subject matter content</a>
+<ul class="sectlevel2">
+<li><a href="#_subchapter_1_2">7.1. Subchapter 1</a></li>
+<li><a href="#_subchapter_2_2">7.2. Subchapter 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#AbstractTestSuite">Appendix A: Abstract Test Suite</a></li>
+<li><a href="#XMLSchemaDocuments">Appendix B: XML Schema Documents</a></li>
+<li><a href="#UMLModel">Appendix C: UML model</a></li>
+<li><a href="#RevisionHistory">Appendix D: Revision History</a></li>
+<li><a href="#Bibliography">Appendix E: Bibliography</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="./images/DGIWG_logo.png" alt="DGIWG Logo" width="200" height="200">
+</div>
+</div>
+</div>
+</div>
+<h1 id="_dgiwg_xxx_defence_profile_of_ogcs_web_processing_service_2_0" class="sect0 text-center"><a class="anchor" href="#_dgiwg_xxx_defence_profile_of_ogcs_web_processing_service_2_0"></a>DGIWG – xxx + Defence Profile of OGC's Web Processing Service 2.0</h1>
+<div class="openblock partintro">
+<div class="content">
+<table id="front_page" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22.7272%;">
+<col style="width: 77.2728%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document type:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document subtype:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implementation profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Profile of:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC WPS 2.0 (OGC 14-065)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document date:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dd month yyyy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edition number:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x.x.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supersedes:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG – XXX Ed. x.x.x, Title, dated 'day' 'month' 'year'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible Party:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Editor :</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dimitri Sarafinof</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Audience:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG participants and associates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template to create STD, TCR, and HBK documents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copyright:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#169; Copyright DGIWG, some rights reserved  -  (CC) (By:) Attribution
+You are free:
+-	to copy, distribute, display, and perform/execute the work
+-	to make derivative works
+-	to make commercial use of the work
+Under the following conditions:
+-	(By:) Attribution. You must give the original author (DGIWG) credit.
+-	For any reuse or distribution, you must make clear to others the license terms of this work.
+Any of these conditions can be waived if you get permission from the copyright holder DGIWG.
+Your fair use and other rights are in no way affected by the above.
+This is a human-readable summary of the Legal Code (the full license is available from Creative Commons &lt;<a href="http://creativecommons.org/licenses/by/2.0/" class="bare">http://creativecommons.org/licenses/by/2.0/</a> &gt;).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph lead">
+<p><strong>Table of Contents</strong></p>
+</div>
+<div class="paragraph">
+<p><em>(Mandatory)</em></p>
+</div>
+<div class="paragraph lead">
+<p><strong>List of Figures</strong></p>
+</div>
+<div class="paragraph">
+<p><em>(as applicable)</em></p>
+</div>
+<div class="paragraph lead">
+<p><strong>List of Tables</strong></p>
+</div>
+<div class="paragraph">
+<p><em>(as applicable)</em></p>
+</div>
+<div class="paragraph lead">
+<p><strong>Executive Summary</strong></p>
+</div>
+<div class="paragraph">
+<p><em>(The inclusion of an Executive Summary is the discretion of the author(s)).</em></p>
+</div>
+<div class="paragraph lead">
+<p><strong>Acknowledgement</strong></p>
+</div>
+<div class="paragraph">
+<p><em>(The acknowledgement clause is optional. Acknowledgements are listed after the Executive Summary, if present, and precede the table of contents)</em></p>
+</div>
+<div class="paragraph">
+<p><em>(Clauses i-iv are optional, and not mandated for approval of issue, however assist in the management of the document)</em></p>
+</div>
+<div class="paragraph">
+<p><strong>i.Contributing participants</strong></p>
+</div>
+<table id="status_codes" class="tableblock frame-all grid-rows stretch">
+<colgroup>
+<col style="width: 12.7659%;">
+<col style="width: 87.2341%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Nation</th>
+<th class="tableblock halign-left valign-top">Parent organization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>France</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Institut National de l&#8217;Information Géographique et Forestière (IGN)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Germany</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bundeswehr Geoinformation Centre (BGIC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>United States</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">National Geospatial-Intelligence Agency (NGA)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>United Kingdom</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Joint Forces Intelligence Group (JFIG)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>ii.Document points of contact</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>For internal documents use:</strong></p>
+</div>
+<div class="paragraph">
+<p>All questions regarding this document shall be directed to the editor or the contributors:</p>
+</div>
+<table id="poc" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22.7272%;">
+<col style="width: 38.6363%;">
+<col style="width: 38.6365%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Person</th>
+<th class="tableblock halign-left valign-top">Organization</th>
+<th class="tableblock halign-left valign-top">Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dimitri Sarafinof</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">National Institute of Geographic and Forest Information</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:Dimitri.Sarafinof@ign.fr">Dimitri.Sarafinof@ign.fr</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xxxx Xxxx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xxxxx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:xxx.yyyy@zzzz.com">xxx.yyyy@zzzz.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For Document approved for public release use:
+All questions regarding this document shall be directed to the <a href="mailto:secretariat@dgiwg.org">secretariat@dgiwg.org</a>
+NOTE: All personal information will be removed when an internal document is made public. This includes names and personal e-mail accounts.</p>
+</div>
+<div class="paragraph">
+<p><strong>iii.Revision history</strong></p>
+</div>
+<table id="revision_history" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15.3846%;">
+<col style="width: 19.2307%;">
+<col style="width: 32.6923%;">
+<col style="width: 32.6924%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Edition number</th>
+<th class="tableblock halign-left valign-top">Primary clauses modified</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2018.08.03</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">first draft from DGIWG adoc template</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>iv.	Future work</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>(Mandatory. The introduction is located on a separated page  preceding the ‘Scope’ statement. The introduction is not numbered.)</em></p>
+</div>
+<div class="paragraph">
+<p>A Web Processing Service (WPS) executes processes</p>
+</div>
+<div class="paragraph">
+<p>The OpenGIS Web Processing Service 2.0 offers five operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GetCapabilities (mandatory): returns service metadata,</p>
+</li>
+<li>
+<p>DescribeProcess (mandatory): returns the description of a specific process,</p>
+</li>
+<li>
+<p>Execute (mandatory): creates a job to run a specific process,</p>
+</li>
+<li>
+<p>GetStatus: erturns status infomration about a processing job,</p>
+</li>
+<li>
+<p>GetResult: returns the result of a processing job,</p>
+</li>
+<li>
+<p>Dismiss: allows a user to cancel a job.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The WPS specification defines five conformance classe:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Basic WPS service profile</p>
+</li>
+<li>
+<p>Synchronous WPS</p>
+</li>
+<li>
+<p>Asynchronous WPS</p>
+</li>
+<li>
+<p>WPS process model encoding</p>
+</li>
+<li>
+<p>Dismiss extension</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The specification also defines a profile called basic WPS which defines a minimal WPS inmplementation with following caracteristics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dezfez</p>
+</li>
+<li>
+<p>fefzedz</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scope"><a class="anchor" href="#_scope"></a>2. Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>(Mandatory)</em></p>
+</div>
+<div class="paragraph">
+<p>This document defines specific Defence requirements, recommendations and guidelines for
+implementations of the OGC Web Processing Service (WPS) standard (document number 14-065), version 2.0.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conformance"><a class="anchor" href="#_conformance"></a>3. Conformance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>(Mandatory for standards)</em></p>
+</div>
+<div class="sect2">
+<h3 id="_conformance_classes"><a class="anchor" href="#_conformance_classes"></a>3.1. Conformance classes</h3>
+<div class="paragraph">
+<p>This document establishes xx conformance classe(s):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DGIWG basic WPS,</p>
+</li>
+<li>
+<p>DGIWG xxx WPS.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>DGIWG WPS Profile conformance classes define requirements for WPS servers allowing
+distribution of geographic data in a military environment.
+Annex A lists the conformance abstract tests which shall be exercised on any software
+artefact claiming to implement the DGIWG WPS profile.</p>
+</div>
+<table id="conf" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Conformance classes</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Conformance class name</th>
+<th class="tableblock halign-left valign-top">Operation or behavior</th>
+<th class="tableblock halign-left valign-top">OGC WPS Conformance Test</th>
+<th class="tableblock halign-left valign-top">DGIWG WPS Conformance Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG basic WPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG requirements x to y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Annex A.1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_backward_compatibility"><a class="anchor" href="#_backward_compatibility"></a>3.2. Backward compatibility</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>4. References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>(As applicable)</em></p>
+</div>
+<div class="sect2">
+<h3 id="_normative_references"><a class="anchor" href="#_normative_references"></a>4.1. Normative references</h3>
+<table id="NormRef" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 47.2222%;">
+<col style="width: 27.7777%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Title</th>
+<th class="tableblock halign-left valign-top">Reference</th>
+<th class="tableblock halign-left valign-top">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="Ref-1">OGC® WPS 2.0.2 Interface Standard</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 14-065</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_informative_references"><a class="anchor" href="#_informative_references"></a>4.2. Informative references</h3>
+<table id="InfRef" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 51.5151%;">
+<col style="width: 30.303%;">
+<col style="width: 18.1819%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title</th>
+<th class="tableblock halign-left valign-top">Reference</th>
+<th class="tableblock halign-left valign-top">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC® WPS 2.0.2 Interface Standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 14-065</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC® Testbed-13: Workflows ER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 17-029</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">r1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC® Testbed-13: Cloud ER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 17-035</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_terms_definitions_and_abbreviations"><a class="anchor" href="#_terms_definitions_and_abbreviations"></a>5. Terms, definitions, and abbreviations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>(As applicable)</em></p>
+</div>
+<div class="sect2">
+<h3 id="_definitions"><a class="anchor" href="#_definitions"></a>5.1. Definitions</h3>
+<div class="paragraph">
+<p>For the purposes of this document, terms and definitions found in WPS 2.0 (<a href="#Ref-1">[Ref-1]</a>) apply.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_abrevations"><a class="anchor" href="#_abrevations"></a>5.2. Abrevations</h3>
+<table id="Abr" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 85%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BBox</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bounding Box</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CRS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coordinate Reference System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HTTP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hypertext Transfer Protocol</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>WPS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web Processing Service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XML</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensible Markup Language</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wps_2_0_presentation"><a class="anchor" href="#_wps_2_0_presentation"></a>6. WPS 2.0 presentation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_subchapter_1"><a class="anchor" href="#_subchapter_1"></a>6.1. Subchapter 1</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_subchapter_2"><a class="anchor" href="#_subchapter_2"></a>6.2. Subchapter 2</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_subject_matter_content"><a class="anchor" href="#_subject_matter_content"></a>7. Subject matter content</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_subchapter_1_2"><a class="anchor" href="#_subchapter_1_2"></a>7.1. Subchapter 1</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_subchapter_2_2"><a class="anchor" href="#_subchapter_2_2"></a>7.2. Subchapter 2</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="AbstractTestSuite"><a class="anchor" href="#AbstractTestSuite"></a>Appendix A: Abstract Test Suite</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An Abstract Test Suite may be relevant to an Engineering Report.</p>
+</div>
+<div class="paragraph">
+<p>An Abstract Test Suite is specified in Clause 9 and Annex A of ISO 19105. That Clause and Annex specify the ISO/TC 211 requirements for Abstract Test Suites. Examples of Abstract Test Suites are available in an annex of most ISO 191XX documents, one of the more useful is in ISO 19136. Note that this guidance may be more abstract than needed in an OGC® Implementation Standard.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. A.1.1	Conformance level 1</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/test/case/id</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confirm that the IUT satisfies all applicable requirements for conformance level 1.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GetCapabilities (mandatory)</p>
+</li>
+<li>
+<p>DescribeRecord (mandatory)</p>
+</li>
+<li>
+<p>GetRecords (mandatory)</p>
+</li>
+<li>
+<p>GetRecordById (mandatory)</p>
+</li>
+<li>
+<p>GetRepositoryItem (mandatory)</p>
+</li>
+<li>
+<p>GetDomain (optional)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG-XXX : clause 2.2</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. A.1.2	Test case for validity of XML response entity</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.dgiwg.org/xxx/xxx" class="bare">http://www.dgiwg.org/xxx/xxx</a></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The XML response entity is valid.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validate content of response entity against corresponding element declaration.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG-XXX : clause. 10.2.5.1, p. 118</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. A.2.1	Conformance level 2</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/test/case/id</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confirm that the IUT satisfies all applicable requirements for conformance level 1.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GetCapabilities (mandatory)</p>
+</li>
+<li>
+<p>DescribeRecord (mandatory)</p>
+</li>
+<li>
+<p>GetRecords (mandatory)</p>
+</li>
+<li>
+<p>GetRecordById (mandatory)</p>
+</li>
+<li>
+<p>GetRepositoryItem (mandatory)</p>
+</li>
+<li>
+<p>GetDomain (optional)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DGIWG XXX: cl. 2.2</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. A.2.2	Test case for validity of XML response entity</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.dgiwg.org/xxx/xxx" class="bare">http://www.dgiwg.org/xxx/xxx</a></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The XML response entity is valid.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validate content of response entity against corresponding element declaration.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC DGIWG XXX: clause. 10.2.5.1, p. 118</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="XMLSchemaDocuments"><a class="anchor" href="#XMLSchemaDocuments"></a>Appendix B: XML Schema Documents</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>XML Schema Documents relevant for DGIWG STD.</p>
+</div>
+<div class="paragraph">
+<p>The term “XML schema“ means all the XML schema parts having the same XML namespace, usually separated into multiple XML Schema Document files (with the file type “.xsd“. The XML schema parts in one XML namespace are usually separated into multiple XML Schema Documents to ease human understanding.</p>
+</div>
+<div class="paragraph">
+<p>In addition to this document, this report includes several XML Schema Documents. These XML Schema Documents are bundled in a zip file with the present document.</p>
+</div>
+<div class="paragraph">
+<p>The TBD abilities now specified in this document use TBD specified XML Schema Documents included in the zip file with this document. These XML Schema Documents combine the XML schema fragments listed in various subclauses of this document, eliminating duplications.</p>
+</div>
+<div class="paragraph">
+<p>These XML Schema Documents roughly match the TBD UML packages described in Annex B, and are named:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>TBD.xsd
+TBD.xsd</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These XML Schema Documents use and build on the OWS common XML Schema Documents specified [OGC 06-121r3], named:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ows19115subset.xsd
+owsCommon.xsd
+owsDataIdentification.xsd
+owsExceptionReport.xsd
+owsGetCapabilities.xsd
+owsOperationsMetadata.xsd
+owsServiceIdentification.xsd
+owsServiceProvider.xsd</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All these XML Schema Documents contain documentation of the meaning of each element and attribute, and this documentation shall be considered normative as specified in Subclause 11.6.3 of [OGC 06-121r9].</p>
+</div>
+<div class="listingblock">
+<div class="title">GetCapabilities.xsd</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ows:Operation</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">GetCapabilities</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;ows:DCP&gt;</span>
+    <span class="tag">&lt;ows:HTTP&gt;</span>
+      <span class="tag">&lt;ows:Post</span> <span class="attribute-name">xlink:href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/?</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;ows:Constraint</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PostEncoding</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+          <span class="tag">&lt;allowedValues&gt;</span>
+            <span class="tag">&lt;ows:Value&gt;</span>SOAP<span class="tag">&lt;/ows:Value&gt;</span>
+          <span class="tag">&lt;/ows:AllowedValues&gt;</span>
+        <span class="tag">&lt;/ows:Constraint&gt;</span>
+      <span class="tag">&lt;/ows:Post&gt;</span>
+    <span class="tag">&lt;/ows:HTTP&gt;</span>
+  <span class="tag">&lt;/ows:DCP&gt;</span>
+<span class="tag">&lt;/ows:Operation&gt;</span>
+<span class="tag">&lt;ows:Operation</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">GetTile</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;ows:DCP&gt;</span>
+    <span class="tag">&lt;ows:HTTP&gt;</span>
+      <span class="tag">&lt;ows:Post</span> <span class="attribute-name">xlink:href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/?</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;ows:Constraint</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PostEncoding</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+          <span class="tag">&lt;ows:AllowedValues&gt;</span>
+            <span class="tag">&lt;ows:Value&gt;</span>SOAP<span class="tag">&lt;/ows:Value&gt;</span>
+          <span class="tag">&lt;/ows:AllowedValues&gt;</span>
+        <span class="tag">&lt;/ows:Constraint&gt;</span>
+      <span class="tag">&lt;/ows:Post&gt;</span>
+    <span class="tag">&lt;/ows:HTTP&gt;</span>
+  <span class="tag">&lt;/ows:DCP&gt;</span>
+<span class="tag">&lt;/ows:Operation&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="UMLModel"><a class="anchor" href="#UMLModel"></a>Appendix C: UML model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A UML model may be relevant to an Engineering Report. This template thus includes this annex as the place for recording this UML model.</p>
+</div>
+<div class="paragraph">
+<p>Instructions and guidelines on the usage of UML models are provided in OGC document <a href="https://portal.opengeospatial.org/files/?artifact_id=38867"> OGC-121r9</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="RevisionHistory"><a class="anchor" href="#RevisionHistory"></a>Appendix D: Revision History</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Example History (Delete this note).</div>
+<div class="paragraph">
+<p>replace below entries as needed</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 6. Revision History</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Editor</th>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Primary clauses modified</th>
+<th class="tableblock halign-left valign-top">Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">July 18, 2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">D. Sarafinof</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">initial version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">July 24, 2016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WSTP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comments integrattion</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix E: Bibliography</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-08-03 16:34:11 Paris, Madrid (heure dÆÚtÚ)
+</div>
+</div>
+</body>
+</html>
