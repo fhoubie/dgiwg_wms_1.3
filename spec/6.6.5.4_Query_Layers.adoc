@@ -1,0 +1,3 @@
+==== Query_Layers
+
+The mandatory QUERY_LAYERS parameter states the map layer(s) from which feature information is desired to be retrieved. Its value is a comma-separated list of one or more map layers. This parameter shall contain at least one layer name, but may contain fewer layers than the original GetMap request. If any layer in the QUERY_LAYERS parameter is not defined in the service metadata of the WMS, the server shall issue a service exception (code = LayerNotDefined).
