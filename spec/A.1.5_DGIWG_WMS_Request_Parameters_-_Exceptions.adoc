@@ -1,0 +1,9 @@
+=== DGIWG WMS Request Parameters - Exceptions
+
+a) Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for the exceptions request parameter rule (DGIWG Requirement 7).
+
+b) Test Method: Generate a sample of invalid requests from a client. Verify that the server provides an appropriate response in English.
+
+c) References: Clauses 6.5.5.2
+
+d)  Test Type: Capability
