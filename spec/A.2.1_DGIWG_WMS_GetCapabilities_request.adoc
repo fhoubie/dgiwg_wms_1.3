@@ -1,0 +1,9 @@
+=== DGIWG WMS GetCapabilities request
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for a GetCapabilities operation request (DGIWG Requirement 8).  
+
+b)  Test Method: Generate sufficient GetCapabilities requests from the client to verify that each parameter is supported.  
+
+c)  References: Clauses 6.6.1  
+
+d)  Test Type: Capability  
