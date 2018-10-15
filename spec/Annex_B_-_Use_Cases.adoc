@@ -1,0 +1,30 @@
+
+*(informative)*
+
+[cols=",,,",options="header",]
+|============================================================================================================================================================================================================================================================================================================================================
+|*Type* |*Title* |*Use Case Description* |*Relevance*
+|*Discover* |Discover georeferenced information (GI) for task |The ability to locate GI available for exploitation within an application. The Basic User can navigate lists of GI datasets to decide which are appropriate to his task. |The ability to retrieve a list of layers served by WMS through the use of a GetCapabilities request.
+|*Discover* |Load GI into applications |The Basic User has identified GI and/or services of interest which have a geospatial context and wishes to use them within the application. |The ability to use WMS to load GI into applications or clients which support the OGC WMS specification.
+|*Discover* |Unload GI from application |The Basic User wishes to unload data or services from application |The ability to remove connections to WMS services or hide visibility of layers using clients which support the OGC WMS specification
+|*Create* |Populate Metadata |The Advanced User populates pre-defined metadata fields. |The ability to add descriptive information about a data service and layer in the <Abstract>
+|*Create* |Link textual/audio/visual data to GeoINT |The Advanced User links textual / audio / visual data to GI. |The ability to incorporate URL links to other documents and resources within WMS attributes.
+|*Create* |Create Custom Symbology (S) |The Advanced User creates/edits custom symbology and saves it. |The ability to define how layers should be symbolised within a WMS map service, including thematic ranges.
+|*Analysis* |Identify Query GI at a pixel/feature/object on the display |The Basic User queries information about GI for a pixel/feature/object on the display. |The ability to perform a GetFeatureInfo request to retrieve information about a feature at a specific location.
+|*Analysis* |Select features/objects based on spatial extent |The Basic User selects features/objects based on a spatial extent in a graphical display. |The ability to display map features following the submission of a request containing a bounding box map extent.
+|*Analysis* |Select GI based on temporal data |The Basic User selects GI based on temporal data. |The ability to submit a GetMap request incorporating a time parameter to retrieve data for a specific point in time
+|*Analysis* |Select Raster or Grid Cells |The Advanced User selects raster or grid cells based on cell or cell values |The ability to query raster data values in WMS layers and display them thematically based on their value
+|*Display* |View 2D and/or 3D GI |The Basic User views 2D and/or 3D GI (including GeoINF (base mapping), GeoINT and other geo-referenced information) rendered in an appropriate manner vector and/or raster in a single coherent view. |The ability to view 2D data presented as a map image
+|*Display* |View the quality, accuracy or confidence level of the GI |The Basic User views the quality, accuracy or confidence level of the GI. |The ability to view additional information about the accuracy of a layer as part of its metadata
+|*Display* |Set the scale threshold at which data shall be displayed (for user created data) |The Advanced User sets the scale threshold at which user created data shall be displayed. |The ability to define zoom scale thresholds for the appearance of layers
+|*Display* |Display Legend |The Basic User views a display legend and the corresponding real-world objects. |The ability to view a legend containing representations of each layer’s symbology
+|*Display* |Projections and Datums Views |The Basic User views GI displayed using a pre-defined operational datum and views GeoINF in the approved projection for the area and the data provided. |The ability to display data in defined projections
+|*Display* |Projections and Datums Changes (S) |The Advanced User changes the projection of the display or the datum to another approved projection/datum. |The ability to modify projections used to display data
+|*Display* |View Temporal sequences of environmental events |The Basic User views temporal sequences of environmental events. |The ability to submit a GetMap request incorporating a time parameter to retrieve data for a specific point in time
+|*Display* |Layer Display and Management |The Basic User performs layer display and management functions |The ability to define layer ordering within a map service and define which layers to request for display.
+|*Display* |View GI Labels |The Basic User views the GI labels and turns off the label display. |The ability to present labels as layers within the WMS
+|*Display* |View GI Attributes |The Basic User view the attributes or metadata of the GI. |The ability to query a feature within a WMS layer to retrieve associated information or view related metadata
+|*Share or Export* |Share User Created GI (Advanced User) |The Advanced User shares user created GI to LAN or WAN or other users cross domain. |The ability to share access to data through WMS services.
+|*Share or Export* |Publish to Web Service |The Advanced User can publish to a Web Service to support the sharing of GI to other users and applications. |The ability to publish data via WMS services.
+|*Share or Export* |Unpublish from a Web Service |The Advanced User can unpublish GI from a web service which has been previously been published. |The ability to remove data from being published via the WMS.
+|============================================================================================================================================================================================================================================================================================================================================
