@@ -1,0 +1,9 @@
+=== DGIWG GetFeatureInfo Operation Request - EXCEPTIONS
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for the EXCEPTIONS parameter (DGIWG Requirement 30).
+
+b)  Test Method: Submit a GetFeatureInfo request from the client and verify that the EXCEPTIONS parameter is used and supports both text/xml and text/html formats.
+
+c)  References: Clauses 6.6.5.3
+
+d)  Test Type: Capability
