@@ -71,9 +71,6 @@ image::/media/image1.png[DGIWG Logo, 200, 200,align=center]
 [.text-center]
 = {docReference} + {title}
 
-
-
-
 [#front_page,reftext='{table-caption} {counter:table-num}']
 [cols="25,85"]
 !===
@@ -104,33 +101,35 @@ Your fair use and other rights are in no way affected by the above.
 This is a human-readable summary of the Legal Code (the full license is available from Creative Commons <http://creativecommons.org/licenses/by/2.0/ >).
 !===
 
-include::../spec/Table_of_Contents.adoc[]
+include::/spec/Table_of_Contents.adoc[]
 
-include::Executive_Summary.adoc[]
+include::/spec/Executive_Summary.adoc[]
 
-include::ii_Document_contributor_contact_points.adoc[]
+include::/spec/i_Submitting_Organizations.adoc[]
 
-include::iii_Revision_History.adoc[]
+include::/spec/ii_Document_contributor_contact_points.adoc[]
 
-include::iv_Future_Work.adoc[]
+include::/spec/iii_Revision_History.adoc[]
 
-include::1_Introduction.adoc[]
+include::/spec/iv_Future_Work.adoc[]
 
-include::2_Scope.adoc[]
+include::/spec/1_Introduction.adoc[]
 
-include::3_Conformance.adoc[]
+include::/spec/2_Scope.adoc[]
 
-include::4_Normative_and_informative_References.adoc[]
+include::/spec/3_Conformance.adoc[]
 
-include::5_Terms_definitions_and_abbreviations.adoc[]
+include::/spec/4_Normative_and_informative_References.adoc[]
+
+include::/spec/5_Terms_definitions_and_abbreviations.adoc[]
 
 // *****************************************************************************
 // Editors organize included-file inputs as appropriate starting here.
 // *****************************************************************************
 
-include::6_DGIWG_WMS_Profile_normative.adoc[]
+include::/spec/6_DGIWG_WMS_Profile_normative.adoc[]
 
-include::7_Quality_of_Service.adoc[]
+include::/spec/7_Quality_of_Service.adoc[]
 
 // you may add any number of chapters as required here
 // *****************************************************************************
