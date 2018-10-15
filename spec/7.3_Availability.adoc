@@ -1,0 +1,5 @@
+== Availability
+
+*Recommendation 9: A DGIWG WMS server should be available 99.9% of the time.*
+
+NOTE: This relates to 10 minutes downtime per week, 0.73 hours per month and 8.73 hours per year.
