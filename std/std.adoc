@@ -104,7 +104,7 @@ Your fair use and other rights are in no way affected by the above.
 This is a human-readable summary of the Legal Code (the full license is available from Creative Commons <http://creativecommons.org/licenses/by/2.0/ >).
 !===
 
-include::Table_of_Contents.adoc[]
+include::../spec/Table_of_Contents.adoc[]
 
 include::Executive_Summary.adoc[]
 
