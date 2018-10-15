@@ -1,0 +1,5 @@
+== Performance
+
+*Recommendation 7: For a 470 Kilobytes image, the response time for sending the initial response to a Get Map Request to a view service shall be maximum 5 seconds in normal situation.*
+
+NOTE: Normal situation represents periods out of peak load. It is set at 90% of the time.
