@@ -1,0 +1,8 @@
+=== GetFeatureInfo response
+
+The server shall return a response according to the requested INFO_FORMAT if the request is valid, or issue a service exception otherwise. The nature of the response is at the discretion of the service provider, but it shall pertain to the feature(s) nearest to (I,J).
+
+::
+*_Requirement 31: A DGIWG WMS server shall provide a response according to the INFO_Format._*
+::
+*_Requirement 32: A DGIWG WMS server shall return the units of measure for dimensional values returned in a GetFeatureInfo response._*
