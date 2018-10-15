@@ -1,0 +1,19 @@
+=== DGIWG WMS Output format
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for supported outputs (DGIWG Requirement 3, 4 and 5).  +
+
+b)  Test Method: Submit requests and verify that the server implements support for:
+
+::
+1.  Submit a GetCapabilities request (FORMAT = text/xml) and verify that the response is text/xml
+2.  Submit a GetCapabilities request (FORMAT = text/html) and verify that the response is text/html
+3.  Submit a GetFeatureInfo request (FORMAT = text/xml) and verify that the response is text/xml
+4.  Submit a GetFeatureInfo request (FORMAT = text/html) and verify that the response is text/html
+5.  A response to a "GetCapabilities" request in English language
+6.  Submit a GetMap request (FORMAT = image/png) and verify that the response is image/png
+7.  Submit a GetMap request (FORMAT = image/gif) and verify that the response is image/gif
+8.  Submit a GetMap request (FORMAT = image/jpeg) and verify that the response is image/jpeg
+
+c)  References: Clauses 6.5.3  +
+
+d)  Test Type: Capability
