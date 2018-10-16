@@ -1,0 +1,9 @@
+=== DGIWG Service Type
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfies all requirements for a OGC Queryable WMS conformance class (DGIWG Requirement 1)  +
+
+b)  Test Method: Submit a GetFeatureInfo requests to the server and verify that it is providing a proper response.  +
+
+c)  References: Clauses 6.4  +
+
+d)  Test Type: Capability  +

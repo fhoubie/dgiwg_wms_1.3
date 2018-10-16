@@ -1,0 +1,11 @@
+==== I, J
+
+The mandatory I and J request parameters are integers that indicate a point of interest on the map that was produced by the embedded GetMap request (the “map request part” described in 7.4.3.3). The point (I,J) is a point in the (i,j) space defined by the Map CS (see 6.7.2). Therefore: 
+
+* the value of I shall be between 0 and the maximum value of the i axis;
+* the value of J shall be between 0 and the maximum value of the j axis;
+* the point I=0, J=0 indicates the pixel at the upper left corner of the map;
+* I increases to the right and J increases downward.
+
+The point (I,J) represents the centre of the indicated pixel.  +
+If the value of I or of J is invalid, the server shall issue a service exception (code = InvalidPoint).

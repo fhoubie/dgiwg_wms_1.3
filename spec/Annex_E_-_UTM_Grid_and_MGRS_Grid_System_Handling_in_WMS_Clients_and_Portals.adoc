@@ -1,0 +1,33 @@
+=  Annex E – UTM Grid and MGRS Grid System Handling in WMS Clients and Portals
+
+*(informative)*
+
+The Universal Transverse Mercator (UTM) Grid and Military Grid Reference System (MGRS) Grid values are commonly used by military operational staff to exchange positions. They both are based on an underlying set of Universal Transverse Mercator projections based on horizontal cylinders which are distributed around the earth (there is a different projection for each six degrees of longitude). UTM projection values tend to be large numbers (a pair of x and y numbers) so to make these easier to deal with by humans, two grid systems (UTM Grid and MGRS Grid) are used. Both allocate grid cells across the world, using the ‘Zone’ between 1 and 60 to define the UTM Projection and a letter to define the vertical dimension.
+
+image:/media/image2.png[image,width=480,height=225]
+
+*UTM Zones and Cell letters*
+
+So the intersection of the equator and Greenwich Meridian intersect (lat long 0,0) exists in several overlapping cells including 31N. Within a cell, UTM Grid simply allocates values based on x and y increments in the projection, so: Lat Long 0, 0 would be UTM Grid 31N 0166021 0000000. MGRS however further subdivides the square into more lettered squares, and so would be 31N AA 66021 00000 (see below).
+
+image:/media/image3.png[image,width=478,height=204]
+
+*MGRS Cell names*
+
+*Issues associated with UTM Grid and MGRS Grid Values in WMS Services*
+
+Firstly, there is the issue of using UTM Grid and MGRS Grid Coordinates. It is unlikely that client applications will want to request WMS display areas using either of these grid values, as client applications are unlikely to internally use these Grids. Most client applications convert the grid values to numeric Universal Transverse Mercator values using a table (associating the cell with an X/Y coordinate in UTM projection) and then work in UTM coordinates.
+
+Additionally there is an issue with treating a UTM Grid or MGRS Grid as a coordinate reference system as there is no defined separation between ordinates (the Cell names of AA etc. embody both X and Y) and therefore it is impossible to define individual ordinates or an axis order which is mandatory for a CRS. Most common is for dialogs or entry methods that support the grids to be included, and a conversion applied (which is as stated a simple table look up). This is also true for querying where clicking on the map generates a grid value.
+
+While it is quite possible to implement this in JavaScript another approach is to have a web service (maybe WPS or a simple Restful service) which takes a Lat/Long or UTM value and generates a UTM grid or MGRS grid value and vice versa.
+
+*Displaying UTM Grid and MGRS Grid*
+
+A typical approach here is to have a Web Map Service which simply displays the relevant UTM Grid or MGRS Grid at the correct resolution (see the examples above). This can then be simply added as a layer to the client over the background WMSs. Configuration of level of detail, colour style etc. is also potentially a requirement but this is a fairly simple service to produce and is really unrelated to the coordinate system issues. However it would be possible for it to provide a ‘GetFeatureInfo’ service which returned the coordinate values in one or more grid systems that it is presenting.
+
+It is not uncommon for most military focused client software packages (example below) which in many cases exploit WMS to provide all of the above capabilities (including a UTM Grid and MGRS Grid Helper, and Visualisation of the grids).
+
+image:/media/image4.png[image,width=308,height=227] image:/media/image5.png[image,width=276,height=228]
+
+*MapLink Pro MGRS/UTM Entry/Conversion and WMS Grid display (Lat Long/MGRS)*

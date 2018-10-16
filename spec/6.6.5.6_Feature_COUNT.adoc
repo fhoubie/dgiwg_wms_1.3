@@ -1,0 +1,8 @@
+==== Feature_COUNT
+
+The optional FEATURE_COUNT parameter states the maximum number of features per layer for which feature information shall be returned. Its value is a positive integer. The default value is 1 if this parameter is omitted or is other than a positive integer.
+
+::
+*_Requirement 29: A DGIWG WMS server shall support the FEATURE_COUNT parameter to enable the increase of the number of features per layer for which the server returns information._*
+
+*NOTE*: Using a high value for the Feature_COUNT parameter may affect server performance. A server might restrict the number of features for which information is retrievable. This limitation has to be advertised in the capabilities document.

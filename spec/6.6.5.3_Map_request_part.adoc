@@ -1,0 +1,3 @@
+==== Map request part
+
+The mandatory “map request part” represents a sequence of parameters from the GetMap request that generated the original map. Two of the GetMap parameters are omitted because GetFeatureInfo provides its own values: VERSION and REQUEST. The remainder of the GetMap request shall be embedded contiguously in the GetFeatureInfo request.

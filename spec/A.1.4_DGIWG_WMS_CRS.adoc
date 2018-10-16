@@ -1,0 +1,13 @@
+=== DGIWG WMS CRS
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for handling CRS’s (DGIWG Requirement 2).  +
+
+b)  Test Method:
+
+::
+1.  Submit requests and verify that all supported CRS are advertised for all available data in the XML response (Capabilities document) to a valid GetCapabilities request.
+2.  Submit GetMap requests and verify that maps are provided in the mandatory CRSs and the appropriate projections for each validity zone.  +
+
+c) References: Clauses 6.5.4
+
+d)  Test Type: Capability

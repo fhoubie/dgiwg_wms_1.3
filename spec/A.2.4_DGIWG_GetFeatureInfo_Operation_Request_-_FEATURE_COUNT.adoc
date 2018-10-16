@@ -1,0 +1,9 @@
+=== DGIWG GetFeatureInfo Operation Request - FEATURE_COUNT
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfy all the requirements for the FEATURE_COUNT parameter (DGIWG Requirement 29).
+
+b)  Test Method: Submit a GetFeatureInfo request from the client and verify that the FEATURE_COUNT parameter can be used to increase the number of features per layer for which the server returns information.
+
+c)  References: Clauses 6.6.5.1
+
+d)  Test Type: Capability

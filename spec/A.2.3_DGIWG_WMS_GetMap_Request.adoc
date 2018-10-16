@@ -1,0 +1,19 @@
+=== DGIWG WMS GetMap Request
+
+a)  Test Purpose: Verify that a basic WMS client satisfies all requirements for a GetMap request (DGIWG Requirements 23 - 28).
+
+b)  Test Method:
+
+::
+1.  Submit a GetMap request and verify support for all GetMap request parameters according to Table 5.
+2.  Submit a GetMap request and verify support for transparency.
+3.  Submit a GetMap request and verify support for INIMAGE_EXCEPTIONS.
+4.  Submit a GetMap request and verify support for BLANK_EXCEPTIONS.
+5.  Submit a GetMap request and verify that for WMS that serve multi-dimensional data support for ELEVATION and TIME parameters is provided.
+6.  Submit a GetMap request and verify that for WMS that serve multi-dimensional data the data utilized is provided according to OGC MetOc “Best Practices for using OGC WMS with Time-Dependent or Elevation-Dependent Data”.
+7.  Submit a GetMap request and verify that for WMS servers that advertise sample dimensions resolve corresponding parameters correctly.
+8.  Submit a GetMap request with a non-existent layer and verify that the client handles the resulting LayerNotDefined exception appropriately, e.g. by adjusting the layer structure.
+
+c)  References: Clauses 6.6.3
+
+d)  Test Type: Capability

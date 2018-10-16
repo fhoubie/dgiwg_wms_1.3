@@ -1,0 +1,25 @@
+=== DGIWG WMS GetCapabilites Response
+
+a)  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for a GetCapabilities operation request (DGIWG Requirements 9 - 22).  
+
+b)  Test Method:  
+
+::
+1.  Submit a GetCapabilities request and verify that the response has all required service metadata elements.
+2.  Submit a GetCapabilities request and verify that the response uses <AccessContraints> to identify classification levels for the service.
+3.  Submit a GetCapabilities request and verify that the response in the Abstract element contains the following information: "This service implements the DGIWG WMS 1.3 profile version 1.0."
+4.  Submit a GetCapabilities request and verify that the response provides a keywordlist that is based on the DFDD groups.
+5.  Submit a GetCapabilities request and verify that the response provides information on the supported styles.
+6.  Submit a GetCapabilities request and verify that the response provides a defined style for the default style.
+7.  Submit a GetCapabilities request and verify that the values for MaxWidth and MaxHeight, when used, are greater than or equal to 800 pixels.
+8.  Submit a GetCapabilities request and verify that the response provides an associated legend in at least one of the following formats: PNG, GIF, JPEG.
+9.  Submit a GetCapabilities request and verify that the provided LegendURL is accessible online.
+10. Submit a GetCapabilities request and verify that the response provides scale denominators for all layers.
+11. Submit a GetCapabilities request and verify that the provided <MinScaleDenominator> value is less than or equal to the <MaxScaleDenominator>.
+12. Submit a GetCapabilities request and verify that for all provided FeatureListURLs the list of features is resolvable through the provided URL.
+13. Submit a GetCapabilities request and verify that for all provided DatURLs the data is resolvable through the provided URL.
+14. Submit a GetCapabilities request and verify that all XML attributes are provided according to Table 4.
+
+c)  References: Clauses 6.6.2
+
+d)  Test Type: Capability

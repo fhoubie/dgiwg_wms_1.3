@@ -1,0 +1,6 @@
+==== EXCEPTIONS
+
+The EXCEPTIONS parameter is optional. If this parameter is absent from the request, the default value is "XML". No other values are defined by ISO 19128:2005 for the WMS GetFeatureInfo request. Use of text/html is for the benefit of human readable content.
+
+::
+*_Requirement 30: A DGIWG WMS server shall support the EXCEPTIONS parameter support of text/xml and text/html._*

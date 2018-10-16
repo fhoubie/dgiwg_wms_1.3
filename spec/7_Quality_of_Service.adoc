@@ -1,0 +1,3 @@
+= Quality of Service
+
+Quality of service comprises requirements on all the aspects of a connection. A DGIWG WMS server should meet the following guidelines for performance, availability and capacity.
