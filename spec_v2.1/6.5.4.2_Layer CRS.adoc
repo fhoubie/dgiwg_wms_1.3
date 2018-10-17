@@ -1,4 +1,4 @@
-==== 6.5.4.2.          Layer CRS
+====  Layer CRS
 
 A Layer CRS is a horizontal coordinate reference system for the
 geographic information that serves as the source for a map. A WMS must
