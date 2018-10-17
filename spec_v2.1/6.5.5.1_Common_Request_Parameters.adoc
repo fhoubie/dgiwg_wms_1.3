@@ -1,4 +1,4 @@
-==== 6.5.5.1.          Common Request Parameters
+==== Common Request Parameters
 
 .There are three common request parameters:
 * *Version*: The VERSION parameter specifies the protocol version number.
