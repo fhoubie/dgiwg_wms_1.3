@@ -1,4 +1,4 @@
-==== 6.5.5.2  Exceptions
+====  Exceptions
 
 The EXCEPTIONS request parameter states the format in which to report errors.
 
