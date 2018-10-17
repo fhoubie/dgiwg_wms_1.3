@@ -1,4 +1,4 @@
-==== 6.6.2.2  General service metadata
+==== General service metadata
 
 The first part of the service metadata is a <Service> element providing general metadata for the server as a whole. It shall include a Name, Title, and Online Resource URL. Optional service metadata includes Abstract, Keyword List, Contact Information, Fees, Access Constraints, and limits the number of layers in a request or the output size of maps.
 
