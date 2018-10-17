@@ -1,4 +1,4 @@
-image:extracted-media/media/image1.png[image]
+image:/media/image1.png[image,400,400]
 
 DGIWG – 112
 
