@@ -1,4 +1,4 @@
-==== 6.5.3.2.  Output formats for GetMap requests
+====  Output formats for GetMap requests
 
 The response to a GetMap request is either a raster or vector file.
 
