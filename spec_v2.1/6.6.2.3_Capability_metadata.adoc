@@ -1,4 +1,4 @@
-==== 6.6.2.3  Capability metadata
+==== Capability metadata
 
 The <Capability> element of the service metadata names the actual operations that are supported by the server, the output formats offered for those operations, and the URL prefix for each operation. The XML schema includes placeholders for Distributed Computing Platforms other than HTTP, but currently only the HTTP platform is defined.  
 
