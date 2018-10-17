@@ -1,3 +1,3 @@
-==== 6.5.5.3  Extended capabilities and operations
+==== Extended capabilities and operations
 
 The Web Map Service allows for optional extended capabilities and operations. Extended capabilities or operations shall be defined when necessary by providing instances of the abstract <_ExtendedCapabilities> or <_ExtendedOperations> elements in the service metadata schema.
