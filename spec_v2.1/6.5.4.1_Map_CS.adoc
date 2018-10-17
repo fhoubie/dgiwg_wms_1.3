@@ -1,6 +1,6 @@
-==== 6.5.4.1.          Map CS
+====  Map CS
 
-A Map CS is a coordinate reference system for a map produced by a WMS. A
+A Map CS is a coordinate reference system for a map produced by a WMS. A 
 WMS map is a rectangular grid of pixels displayed on a computer screen
 (or a digital file that could be so displayed). The Map CS has a
 horizontal axis denoted i, and a vertical axis denoted j. i and j shall
