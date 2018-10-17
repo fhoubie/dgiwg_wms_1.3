@@ -1,4 +1,4 @@
-=== 6.6.1  GetCapabilities Operation Request
+=== GetCapabilities Operation Request
 
 The purpose of the mandatory GetCapabilities operation is to obtain service metadata, which is a machine readable (and human-readable) description of the server’s information content and acceptable request parameter values. Table 3 lists the GetCapabilities request parameters.
 
