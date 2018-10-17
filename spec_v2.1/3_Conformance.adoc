@@ -1,4 +1,4 @@
-= 3.  Conformance
+=  Conformance
 
 This document establishes one conformance class: DGIWG WMS. Annex A lists the conformance abstract tests which shall be exercised on any software artefact claiming to implement a DGIWG WMS profile.
 
