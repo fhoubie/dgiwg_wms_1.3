@@ -1,4 +1,4 @@
-==== 6.5.3.1.  Output formats for GetCapabilities and GetFeatureInfo requests
+====  Output formats for GetCapabilities and GetFeatureInfo requests
 
 The response to a GetCapabilities or GetFeatureInfo request is always a text file.
 
