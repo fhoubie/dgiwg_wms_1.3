@@ -559,7 +559,7 @@ This requirement means that a DGIWG WMS server supports HTTP GET for at least Ge
 
 English is required to support interoperability in a coalition environment.
 
-NOTE: Services can also be provided using alternative languages to English: This profile does not specify the details for implementation of multilingual services.
+*NOTE*: Services can also be provided using alternative languages to English: This profile does not specify the details for implementation of multilingual services.
 
 === Output Formats
 
@@ -584,11 +584,11 @@ The response to a GetMap request is either a raster or vector file.
 
 
 
-NOTE: GIF is always 8 bits which can be used for limited bandwidth scenario, PNG can be eiter 8, 24 or 32 bits (depending on how it is configured).
+*NOTE*: GIF is always 8 bits which can be used for limited bandwidth scenario, PNG can be eiter 8, 24 or 32 bits (depending on how it is configured).
 
 *Recommendation 1: If a service requires vector based graphical elements output, a DGIWG WMS server should provide image/svg+xml (Scalable Vector Graphics) for the GetMap operation.*
 
-NOTE: Users should be aware that only the output formats GIF and PNG support transparency.
+*NOTE*: Users should be aware that only the output formats GIF and PNG support transparency.
 
 === Coordinate Systems
 
