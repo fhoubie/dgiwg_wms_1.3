@@ -206,7 +206,7 @@ Annex A lists the conformance abstract tests which shall be exercised on any sof
 
 DGIWG WMS Profile conformance class defines requirements for WMS servers allowing distribution of geographic data in a military environment.
 
-[cols=",,,",options="header",]
+[cols=",,,",]
 
 |=============================================================================================================
 
