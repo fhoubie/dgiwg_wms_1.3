@@ -4,23 +4,15 @@ DGIWG – 112
 
 DGIWG – Web Map Service 1.3 Profile – Revision
 
-*Document type:* Standard
-
-*Document subtype:* Implementation Profile
-
-*Document date:* 17 October 2017
-
-*Edition number:* 3.0 WD7
-
-*Supersedes:* This document supersedes DGIWG – 112 Ed. 2.1.0, Web Map Service (WMS) Profile, dated 16 November 2015.
-
-*Responsible Party:* DGIWG
-
-*Audience:* This document is approved for public release and is available on the DGIWG website, http://www.dgiwg.org/dgiwg/
-
-*Abstract:* This document defines specific DGIWG requirements, recommendations and guidelines for implementations of the ISO and OGC Web Map Service standards; ISO 19128:2005 Web Map Server Interface and the OpenGIS Web Map Server Implementation Specification 1.3.0.
-
-*Copyright:* (C) Copyright DGIWG, some rights reserved - (CC) (By:) Attribution
+*Document type:* Standard  +
+*Document subtype:* Implementation Profile  +
+*Document date:* 17 October 2017  +
+*Edition number:* 3.0 WD7  +
+*Supersedes:* This document supersedes DGIWG – 112 Ed. 2.1.0, Web Map Service (WMS) Profile, dated 16 November 2015.  +
+*Responsible Party:* DGIWG  +
+*Audience:* This document is approved for public release and is available on the DGIWG website, http://www.dgiwg.org/dgiwg/  +
+*Abstract:* This document defines specific DGIWG requirements, recommendations and guidelines for implementations of the ISO and OGC Web Map Service standards; ISO 19128:2005 Web Map Server Interface and the OpenGIS Web Map Server Implementation Specification 1.3.0.  +
+*Copyright:* (C) Copyright DGIWG, some rights reserved - (CC) (By:) Attribution  
 
 You are free:
 
@@ -44,165 +36,89 @@ This is a human-readable summary of the Legal Code (the full license is availabl
 
 = Table of Contents
 
-link:#table-of-contents[Table of Contents i]
-
-link:#list-of-tables[List of Tables iii]
-
-link:#executive-summary[Executive Summary iii]
-
-link:#submitting-organizations[i. Submitting organizations v]
-
-link:#revision-history[ii. Revision history v]
-
-link:#future-work[iii. Future work v]
-
-link:#introduction[1. Introduction 1]
-
-link:#scope[2. Scope 2]
-
-link:#conformance[3. Conformance 2]
-
-link:#conformance-classes[3.1. Conformance classes 2]
-
-link:#backward-compatibility[3.2. Backward compatibility 2]
-
-link:#normative-and-informative-references[4. Normative and informative References 3]
-
-link:#normative-references[4.1. Normative references 3]
-
-link:#informative-references[4.2. Informative References 4]
-
-link:#terms-definitions-and-abbreviations[5. Terms, definitions, and abbreviations 4]
-
-link:#definitions[5.1. Definitions 4]
-
-link:#abbreviations[5.2. Abbreviations 4]
-
-link:#_Toc495991118[6. Presentation (informative) 6]
-
-link:#dgiwg-basic-wms-normative[7. DGIWG Basic WMS (normative) 7]
-
-link:#normative-requirements[7.1. Normative Requirements 7]
-
-link:#non-normative-recommendations-for-implementation[7.2. Non-Normative Recommendations for Implementation 8]
-
-link:#service-type[7.3. Service Type 9]
-
-link:#basic-service-elements[7.4. Basic service elements 9]
-
-link:#version-number[7.4.1. Version number 9]
-
-link:#binding[7.4.2. Binding 9]
-
-link:#language[7.4.3. Language 9]
-
-link:#output-formats[7.4.4. Output Formats 10]
-
-link:#coordinate-systems[7.4.5. Coordinate Systems 10]
-
-link:#request-parameter-rules[7.4.6. Request Parameter Rules 12]
-
-link:#operations[7.5. Operations 13]
-
-link:#getcapabilities-operation-request[7.5.1. GetCapabilities Operation Request 13]
-
-link:#getcapabilities-operation-response[7.5.2. GetCapabilities Operation Response 13]
-
-link:#getmap-operation-request[7.5.3. GetMap Operation Request 20]
-
-link:#getmap-response[7.5.4. GetMap Response 22]
-
-link:#dgiwg-queryable-wms-normative[8. DGIWG Queryable WMS (normative) 23]
-
-link:#normative-requirements-1[8.1. Normative Requirements 23]
-
-link:#non-normative-recommendations-for-implementation-1[8.2. Non-Normative Recommendations for Implementation 23]
-
-link:#service-type-1[8.3. Service Type 23]
-
-link:#basic-service-elements-1[8.4. Basic Service elements 24]
-
-link:#output-formats-1[8.4.1. Output Formats 24]
-
-link:#operations-1[8.5. Operations 24]
-
-link:#getcapabilities-operation-response-1[8.5.1. GetCapabilities Operation Response 24]
-
-link:#getfeatureinfo-operation-request[8.5.2. GetFeatureInfo Operation Request 24]
-
-link:#getfeatureinfo-response[8.5.3. GetFeatureInfo response 26]
-
-link:#quality-of-service[9. Quality of Service 27]
-
-link:#non-normative-recommendations-for-implementation-2[9.1. Non-Normative Recommendations for Implementation 27]
-
-link:#performance[9.2. Performance 27]
-
-link:#capacity[9.3. Capacity 27]
-
-link:#availability[9.4. Availability 27]
-
-link:#annex-a-abstract-test-suite[Annex A – Abstract Test Suite 28]
-
-link:#dgiwg-basic-wms[A.1 DGIWG Basic WMS 28]
-
-link:#dgiwg-service-type[A.1.1 DGIWG Service Type 28]
-
-link:#dgiwg-basic-service-elements[A.1.2 DGIWG Basic Service elements 28]
-
-link:#dgiwg-wms-crs[A.1.3 DGIWG WMS CRS 29]
-
-link:#dgiwg-wms-request-parameters---exceptions[A.1.4 DGIWG WMS Request Parameters - Exceptions 29]
-
-link:#dgiwg-wms-operations[A.1.5 DGIWG WMS Operations 29]
-
-link:#dgiwg-queryable-wms[A.2 DGIWG Queryable WMS 31]
-
-link:#dgiwg-wms-basic[A.2.1 DGIWG WMS Basic 31]
-
-link:#dgiwg-service-type-1[A.2.2 DGIWG Service Type 31]
-
-link:#dgiwg-basic-service-elements-1[A.2.3 DGIWG Basic Service elements 31]
-
-link:#dgiwg-wms-operations-1[A.2.4 DGIWG WMS operations 31]
-
-link:#annex-b-use-cases[Annex B – Use cases 33]
-
-link:#annex-c-examples[Annex C – Examples 36]
-
-link:#annex-d-client-requirements-and-recommendations[Annex D – Client Requirements and Recommendations 42]
-
-link:#annex-e-utm-grid-and-mgrs-grid-system-handling-in-wms-clients-and-portals[Annex E – UTM Grid and MGRS Grid System Handling in WMS Clients and Portals 44]
-
-link:#annex-f-dgim-groups-and-subgroups-in-baseline-2016-2.0[Annex F – DGIM groups and subgroups in baseline 2016-2.0 46]
-
+link:#table-of-contents[Table of Contents i]  +
+link:#list-of-tables[List of Tables iii]  +
+link:#executive-summary[Executive Summary iii]  +
+link:#submitting-organizations[i. Submitting organizations v]  +
+link:#revision-history[ii. Revision history v]  +
+link:#future-work[iii. Future work v]  +
+link:#introduction[1. Introduction 1]  +
+link:#scope[2. Scope 2]  +
+link:#conformance[3. Conformance 2]  +
+link:#conformance-classes[3.1. Conformance classes 2]  +
+link:#backward-compatibility[3.2. Backward compatibility 2]  +
+link:#normative-and-informative-references[4. Normative and informative References 3]  +
+link:#normative-references[4.1. Normative references 3]  +
+link:#informative-references[4.2. Informative References 4]  +
+link:#terms-definitions-and-abbreviations[5. Terms, definitions, and abbreviations 4]  +
+link:#definitions[5.1. Definitions 4]  +
+link:#abbreviations[5.2. Abbreviations 4]  +
+link:#_Toc495991118[6. Presentation (informative) 6]  +
+link:#dgiwg-basic-wms-normative[7. DGIWG Basic WMS (normative) 7]  +
+link:#normative-requirements[7.1. Normative Requirements 7]  +
+link:#non-normative-recommendations-for-implementation[7.2. Non-Normative Recommendations for Implementation 8]  +
+link:#service-type[7.3. Service Type 9]  +
+link:#basic-service-elements[7.4. Basic service elements 9]  +
+link:#version-number[7.4.1. Version number 9]  +
+link:#binding[7.4.2. Binding 9]  +
+link:#language[7.4.3. Language 9]  +
+link:#output-formats[7.4.4. Output Formats 10]  +
+link:#coordinate-systems[7.4.5. Coordinate Systems 10]  +
+link:#request-parameter-rules[7.4.6. Request Parameter Rules 12]  +
+link:#operations[7.5. Operations 13]  +
+link:#getcapabilities-operation-request[7.5.1. GetCapabilities Operation Request 13]  +
+link:#getcapabilities-operation-response[7.5.2. GetCapabilities Operation Response 13]  +
+link:#getmap-operation-request[7.5.3. GetMap Operation Request 20]  +
+link:#getmap-response[7.5.4. GetMap Response 22]  +
+link:#dgiwg-queryable-wms-normative[8. DGIWG Queryable WMS (normative) 23]  +
+link:#normative-requirements-1[8.1. Normative Requirements 23]  +
+link:#non-normative-recommendations-for-implementation-1[8.2. Non-Normative Recommendations for Implementation 23]  +
+link:#service-type-1[8.3. Service Type 23]  +
+link:#basic-service-elements-1[8.4. Basic Service elements 24]  +
+link:#output-formats-1[8.4.1. Output Formats 24]  +
+link:#operations-1[8.5. Operations 24]  +
+link:#getcapabilities-operation-response-1[8.5.1. GetCapabilities Operation Response 24]  +
+link:#getfeatureinfo-operation-request[8.5.2. GetFeatureInfo Operation Request 24]  +
+link:#getfeatureinfo-response[8.5.3. GetFeatureInfo response 26]  +
+link:#quality-of-service[9. Quality of Service 27]  +
+link:#non-normative-recommendations-for-implementation-2[9.1. Non-Normative Recommendations for Implementation 27]  +
+link:#performance[9.2. Performance 27]  +
+link:#capacity[9.3. Capacity 27]  +
+link:#availability[9.4. Availability 27]  +
+
+link:#annex-a-abstract-test-suite[Annex A – Abstract Test Suite 28]  +
+link:#dgiwg-basic-wms[A.1 DGIWG Basic WMS 28]  +
+link:#dgiwg-service-type[A.1.1 DGIWG Service Type 28]  +
+link:#dgiwg-basic-service-elements[A.1.2 DGIWG Basic Service elements 28]  +
+link:#dgiwg-wms-crs[A.1.3 DGIWG WMS CRS 29]  +
+link:#dgiwg-wms-request-parameters---exceptions[A.1.4 DGIWG WMS Request Parameters - Exceptions 29]  +
+link:#dgiwg-wms-operations[A.1.5 DGIWG WMS Operations 29]  +
+link:#dgiwg-queryable-wms[A.2 DGIWG Queryable WMS 31]  +
+link:#dgiwg-wms-basic[A.2.1 DGIWG WMS Basic 31]  +
+link:#dgiwg-service-type-1[A.2.2 DGIWG Service Type 31]  +
+link:#dgiwg-basic-service-elements-1[A.2.3 DGIWG Basic Service elements 31]  +
+link:#dgiwg-wms-operations-1[A.2.4 DGIWG WMS operations 31]  +
+link:#annex-b-use-cases[Annex B – Use cases 33]  +
+link:#annex-c-examples[Annex C – Examples 36]  +
+link:#annex-d-client-requirements-and-recommendations[Annex D – Client Requirements and Recommendations 42]  +
+link:#annex-e-utm-grid-and-mgrs-grid-system-handling-in-wms-clients-and-portals[Annex E – UTM Grid and MGRS Grid System Handling in WMS Clients and Portals 44]  +
+link:#annex-f-dgim-groups-and-subgroups-in-baseline-2016-2.0[Annex F – DGIM groups and subgroups in baseline 2016-2.0 46]  +
 link:#annex-g-changes-from-v2.1-and-3.0-of-the-dgwig-wms-profile[Annex G – Changes from v2.1 and 3.0 of the DGWIG WMS profile 49]
 
 = List of Tables
 
-link:#_Ref399233124[Table 1: DGIWG Basic WMS Normative Server Requirements 8]
-
-link:#_Ref399233142[Table 2: DGIWG WMS Profile Non-normative Recommendations for DGIWG Basic WMS Server Implementation 9]
-
-link:#_Ref363043970[Table 3: The parameters of a GetCapabilities request URL as per Normative Reference [1] 13]
-
-link:#_Ref477963119[Table 4: GetCapabilities response – general service metadata 14]
-
-link:#_Ref363068298[Table 5: Layer attributes 18]
-
-link:#_Ref363158505[Table 6: GetMap request parameters 20]
-
-link:#_Ref482885652[Table 7: DGIWG Queryable WMS Normative Server Requirements 23]
-
-link:#_Ref482885633[Table 8: DGIWG WMS Profile Non-normative Recommendations for DGIWG Queryable WMS Server Implementation 23]
-
-link:#_Toc488937754[Table 9: GetFeatureInfo Request parameters 25]
-
-link:#_Toc488937755[Table 10: DGIWG WMS Profile Non-normative Recommendations about quality for DGIWG WMS Server Implementation 27]
-
-link:#_Ref394433751[Table 11: Normative client requirements 42]
-
-link:#_Ref394433891[Table 12: DGIWG WMS Profile Non-normative Recommandations for Client Implementation 42]
+link:#_Ref399233124[Table 1: DGIWG Basic WMS Normative Server Requirements 8]  +
+link:#_Ref399233142[Table 2: DGIWG WMS Profile Non-normative Recommendations for DGIWG Basic WMS Server Implementation 9]  +
+link:#_Ref363043970[Table 3: The parameters of a GetCapabilities request URL as per Normative Reference [1] 13]  +
+link:#_Ref477963119[Table 4: GetCapabilities response – general service metadata 14]  +
+link:#_Ref363068298[Table 5: Layer attributes 18]  +
+link:#_Ref363158505[Table 6: GetMap request parameters 20]  +
+link:#_Ref482885652[Table 7: DGIWG Queryable WMS Normative Server Requirements 23]  +
+link:#_Ref482885633[Table 8: DGIWG WMS Profile Non-normative Recommendations for DGIWG Queryable WMS Server Implementation 23]  +
+link:#_Toc488937754[Table 9: GetFeatureInfo Request parameters 25]  +
+link:#_Toc488937755[Table 10: DGIWG WMS Profile Non-normative Recommendations about quality for DGIWG WMS Server Implementation 27]  +
+link:#_Ref394433751[Table 11: Normative client requirements 42]  +
+link:#_Ref394433891[Table 12: DGIWG WMS Profile Non-normative Recommandations for Client Implementation 42]  +
 
 = Executive Summary
 
@@ -296,20 +212,15 @@ DGIWG WMS Profile conformance class defines requirements for WMS servers allowin
 
 |*Conformance class name* |*Operation or behavior* |*OGC WMS Conformance Test* |*DGIWG WMS Conformance Test*
 
-|*OGC WMS Basic* |The server shall implement the Basic WMS conformance class |*A.1 Basic WMS* |
-
+|*OGC WMS Basic* |The server shall implement the Basic WMS conformance class |*A.1 Basic WMS* | 
 |*OGC WMS Queryable* a|The server shall implement the Basic WMS conformance class
 
 DGIWG Requirement 1
 |*A.2 Queryable WMS* |
 
-a|
-
-*DGIWG Basic WMS*
-
+a|*DGIWG Basic WMS* 
 http://www.dgiwg.org/std/wms/3.0/conf/basic
-
- a|
+a|
 
 *DGIWG requirements*
 
@@ -317,17 +228,11 @@ DGIWG WMS Basic WMSProfile (normative)
 
 Requirement 1 to Requirement 23
 
- | |*Annex* *A.1*
+| |*Annex* *A.1*
 
-a|
-
-*DGIWG Queryable WMS*
-
+a|*DGIWG Queryable WMS*
 http://www.dgiwg.org/std/wms/3.0/conf/queryable
-
- a|
-
-*DGIWG requirements*
+a|*DGIWG requirements*
 
 DGIWG Queryable WMS (normative)
 
