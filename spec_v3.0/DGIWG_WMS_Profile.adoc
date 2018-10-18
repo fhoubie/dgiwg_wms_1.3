@@ -315,7 +315,7 @@ For the purposes of this document, terms and definitions found in WMS 1.3, *ISO 
 
 == Abbreviations
 
-[cols="<,<",options="header",]
+[cols="<,<",]
 
 |======================================================
 |*BBox* |Bounding Box
@@ -373,7 +373,7 @@ For the purposes of this document, terms and definitions found in WMS 1.3, *ISO 
 
 = Presentation (informative)
 
-A WMS that complies with the DGIWG WMS profile *will *
+A WMS that complies with the DGIWG WMS profile *will*
 
 a.  satisfy all requirements stipulated in the OGC WMS 1.3.0 Specification;
 
