@@ -178,7 +178,7 @@ link:#annex-f-dgim-groups-and-subgroups-in-baseline-2016-2.0[Annex F – DGIM gr
 
 link:#annex-g-changes-from-v2.1-and-3.0-of-the-dgwig-wms-profile[Annex G – Changes from v2.1 and 3.0 of the DGWIG WMS profile 49]
 
-=  List of Tables
+= List of Tables
 
 link:#_Ref399233124[Table 1: DGIWG Basic WMS Normative Server Requirements 8]
 
@@ -339,73 +339,40 @@ All requirements from DGIWG Basic WMS and Requirement 24 to Requirement 27
 
 == Backward compatibility
 
-
-
 From a high level point of view, following process has been used for moving from version 2.1 to version 3.0 of the DGIWG WMS profile:
-
-
 
 * Requirements have been broken into two conformances classes; "DGIWG Basic WMS" defines then the minimum DGIWG implementation;
 
-
-
 * Some requirements have been clarified based on comments from NATO/NCIA or comments from testbeds;
-
-
 
 * Some requirements have been relaxed or simplified (meaning there are easier to implement with version 3.0); some have been completely deleted.
 
-
-
-
-
 *This means this 3.0 is easier to implement; all WMS server compliant with DGIWG WMS profile v2.1 are compliant with the v3.0, "DGIWG Queryable WMS" conformance class.*
-
-
 
 [cols=",",options="header",]
 
 |====================================================
-
 |*DGIWG WMS profile v2.1* |*DGIWG WMS profile v3.0*
-
 |Only one single conformance class |"DGIWG Basic WMS"
-
 | |"DGIWG Queryable WMS"
-
 |====================================================
-
-
 
 More details are provided in ANNEX F.
 
-
-
 = Normative and informative References
 
-
-
 == Normative references
-
-
 
 [cols=",,,",]
 
 |========================================================================================================
 
 |ID |Title |Reference |Version
-
 |[1] |OGC Web Map Service Implementation Specification 1.3.0, 2006 (same as ISO 19128) |OGC 06-042 |1.3.0
-
 |[3] |DGIWG Metadata Foundation |DGIWG – 114 |1.10 (7-2014)
-
 |========================================================================================================
 
-
-
 == Informative References
-
-
 
 [cols=",,",]
 
@@ -433,199 +400,104 @@ More details are provided in ANNEX F.
 
 |=================================================================================================================================================================================================
 
-
-
 *NOTE:* Implementers of the DGIWG WMS 1.3 Profile should verify all Reference documents for latest edition against the holdings found under http://www.dgiwg.org/dgiwg/htm/documents/documents.htm, Open Geospatial Consortium (OGC) documents are located at: http://www.opengeospatial.org/standards and https://nsgreg.nga.mil/index.jsp
-
-
 
 = Terms, definitions, and abbreviations
 
-
-
 == Definitions
-
-
 
 For the purposes of this document, terms and definitions found in WMS 1.3, *ISO 19128:2005* / *[OGC 06-042]* apply.
 
-
-
 == Abbreviations
 
-
-
-[cols=",",options="header",]
+[cols="<,<",options="header",]
 
 |======================================================
-
 |*BBox* |Bounding Box
-
 |*CRS* |Coordinate Reference System
-
 |*CS* |Coordinate System
-
 |*CSW* |Catalogue Service for the Web
-
 |*DGIWG* |Defence Geospatial Information Working Group
-
 |*DFDD* |DGIWG Feature Data Dictionary
-
 |*DMF* |DGIWG Metadata Framework
-
 |*EPSG* |European Petroleum Survey Group
-
 |*FES* |Filter Encoding Specification
-
 |*FGDC* |Federal Geographic Data Committee
-
 |*GI* |Georeferenced Information
-
 |*GIF* |Graphics Interchange Format
-
 |*GeoInf* |Geospatial Information
-
 |*GeoInt* |Geospatial Intelligence
-
 |*GML* |Geography Markup Language
-
 |*GZIP* |GNU Zip File format
-
 |*HTTP* |Hypertext Transfer Protocol
-
 |*IETF* |Internet Engineering Task Force
-
 |*ISO* |International Organization for Standardization
-
 |*ISO/DIS* |ISO Draft International Standard
-
 |*JPEG* |Joint Photographics Expert Group
-
 |*JSON* |JavaScript Object Notation
-
 |*KVP* |Keyword Value Pairs
-
 |*LAN* |Local Area Network
-
 |*MIME* |Multipurpose Internet Mail Extension
-
 |*NATO* |North Atlantic Treaty Organization
-
 |*NGIF* |NATO Geospatial Information Framework
-
 |*NSG* |National System for Geospatial-Intelligence
-
 |*OGC* |Open Geospatial Consortium
-
 |*OWS* |OGC Web Service
-
 |*PNG* |Portable Network Graphics
-
 |*SDI* |Spatial Data Infrastructure
-
 |*SOAP* |Simple Object Access Protocol
-
 |*SQL* |Structured Query Language
-
 |*SVG* |Scalable Vector Graphics
-
 |*UML* |Unified Modelling Language
-
 |*UPS* |Universal polar stereographic coordinate system
-
 |*URI* |Uniform Resource Identifier
-
 |*URL* |Uniform Resource Locator
-
 |*URN* |Uniform Resource Name
-
 |*UTM* |Universal Transverse Mercator
-
 |*VSP* |Vendor Specific Parameter
-
 |*WFS* |Web Feature Service
-
 |*WMS* |Web Map Service
-
 |*WMTS* |Web Map Tile Service
-
 |*WAN* |Wide Area Network
-
 |*WFS* |Web Feature Service
-
 |*WSDL* |Web Services Description Language
-
 |*XML* |Extensible Markup Language
-
 |*XPath* |XML Path Language
-
 |*XQuery* |XML Query
-
 |======================================================
-
-
 
 = Presentation (informative)
 
-
-
 A WMS that complies with the DGIWG WMS profile *will *
-
-
 
 a.  satisfy all requirements stipulated in the OGC WMS 1.3.0 Specification;
 
 b.  satisfy all requirements stipulated in this document.
 
 
-
-
-
 These profiles provide advice on the implementation of the WMS so that tests can be provided to ensure objective compliance to the profile. The profiles provide “Normative Clauses” to describe how each component shall be implemented. The Normative Clauses define requirements where mandatory compliance is required for attainment of conformance. However, the profile also includes optional Recommendations which may require a subjective test.
-
-
 
 The following syntax is used to indicate the compliance requirement within the profile:
 
-
-
 * Mandatory (M) – The requirement shall be implemented
-
-
 
 * Conditional (C) – Mandatory when “If” statement applies
 
-
-
 * Optional (O) – Should be implemented
-
-
 
 *Note:* All Requirements and Recommendations presented within this document are the result of information gathered during the DGIWG Nations questionnaire/survey process. These requirements have also been reviewed and discussed with NCIA (NATO Communications and Information Agency). Implementers should be aware that certain requirements are unique to a national profile such as the metadata requirements for the US shall include conformance with the NSG Metadata Framework while the DGIWG requires conformance with the DGIWG Metadata Framework. These two metadata profiles have been synchronized to the fullest extent possible.
 
 
 
-
-
 = DGIWG Basic WMS (normative)
-
-
 
 == Normative Requirements
 
-
-
 The Normative requirements requested by this conformance class are summarized in Table 1.
-
-
 
 Precondition to all requirements.
 
-
-
 *_PRECONDITION 1: the environment has to provide the location identified by a URL which can be used by the WMS server to make artefacts available to clients. This precondition ensure that any URL provided by the server can be resolvable by the client_*.
-
-
 
 [cols=",,",options="header",]
 
@@ -643,19 +515,11 @@ Precondition to all requirements.
 
 A DGIWG Basic WMS server shall support the following raster formats for the GetMap operation:
 
-
-
 • image/png (Portable Network Graphics)
-
-
 
 • image/gif (Graphics Interchange Format)
 
-
-
 • image/jpeg (Joint Photographics Expert Group)
-
-
 
  |M
 
@@ -663,15 +527,9 @@ A DGIWG Basic WMS server shall support the following raster formats for the GetM
 
 A DGIWG Basic WMS server shall support the following coordinate reference systems:
 
-
-
 • CRS:84 WGS84 geographic longitude, then latitude, expressed in decimal degrees
 
-
-
 • EPSG:4326 WGS84 geographic latitude, then longitude, expressed in decimal degrees
-
-
 
 • EPSG:3395 World Mercator projection
 
@@ -679,21 +537,13 @@ A DGIWG Basic WMS server shall support the following coordinate reference system
 
 Among the following Coordinate Reference Systems, the service shall support all those which validity zone overlaps data published by the service:
 
-
-
 • UTM projections over WGS84 (north zones)… EPSG:32601 to EPSG:32660
-
-
 
 • UTM projections over WGS84 (south zones)… EPSG:32701 to EPSG:32760
 
-
-
 • UPS projection over WGS84 (north zone)… EPSG: 5041
 
-
-
-UPS projection over WGS84 (south zone)… EPSG: 5042
+• UPS projection over WGS84 (south zone)… EPSG: 5042
 
 
 
@@ -737,19 +587,11 @@ UPS projection over WGS84 (south zone)… EPSG: 5042
 
 |=========================================================================================================================================================================================================================================================================
 
-
-
 [[_Ref399233124]]Table 1: DGIWG Basic WMS Normative Server Requirements
-
-
 
 == Non-Normative Recommendations for Implementation
 
-
-
 The non-normative requirements requested by this profile are summarized in Table 2
-
-
 
 [cols=",,",options="header",]
 
@@ -777,108 +619,56 @@ The non-normative requirements requested by this profile are summarized in Table
 
 |=====================================================================================================================================================================================================================================================================================
 
-
-
 [[_Ref399233142]]Table 2: DGIWG WMS Profile Non-normative Recommendations for DGIWG Basic WMS Server Implementation
-
-
 
 == Service Type
 
-
-
 The OGC WMS Implementation Specification defines two conformance classes, “Basic WMS” and “Queryable WMS”. A Basic WMS supports the GetCapabilities and GetMap operations (requests and responses); a Queryable WMS includes all Basic WMS operations and an additional GetFeatureInfo operation.
 
-
-
 ::
-
 *_Requirement 1: A DGIWG Basic WMS server shall be compliant to the Basic WMS conformance class._*
-
-
 
 According to this requirement a DGIWG WMS server shall support the GetCapabilities and GetMap operations. This requirement ensures compatibility with the base standard.
 
-
-
 == Basic service elements
-
-
 
 The Basic service elements specify aspects of Web Map Server behavior that are independent of particular operations or are common to several operations.
 
-
-
 === Version number
-
-
 
 The VERSION parameter is mandatory in GetMap and GetFeatureInfo requests. The version number is 1.3.0.
 
-
-
 === Binding
-
-
 
 The OGC WMS 1.3.0 standard requires support for HTTP Get. Support for HTTP Post is optional. A SOAP binding is not defined in the standard.
 
-
-
 ::
-
 *_Requirement 2: A DGIWG Basic WMS server shall support HTTP GET for all operations provided by the server, with parameters encoded in KVP._*
-
-
 
 This requirement means that a DGIWG WMS server supports HTTP GET for at least GetCapabilities and GetMap operations. If another operation is provided (i.e. GetFeatureInfo), then HTTP GET has to be supported by this operation as well.
 
-
-
 === Language
 
-
-
 ::
-
 *_Requirement 3: A DGIWG Basic WMS server shall provide metadata content in a response to a "GetCapabilities" or “GetFeatureInfo” (if supported) request in English language._*
-
-
 
 English is required to support interoperability in a coalition environment.
 
-
-
 NOTE: Services can also be provided using alternative languages to English: This profile does not specify the details for implementation of multilingual services.
-
-
 
 === Output Formats
 
-
-
 The response to a Web Map Service request is always a computer file. The file may contain text, or the file may represent a map image depending on the operation. For the particular operations a DGIWG WMS server shall support the following output formats.
-
-
 
 ==== Output formats for GetCapabilities request
 
-
-
 The response to a GetCapabilities request is always a text file. Base standard require support of the default text/xml.
-
-
 
 ==== Output formats for GetMap request
 
-
-
 The response to a GetMap request is either a raster or vector file.
 
-
-
 ::
-
 *_Requirement 4: A DGIWG Basic WMS server shall support the following raster formats for the GetMap operation:_*
 
 * *_image/png (Portable Network Graphics)_*
@@ -889,53 +679,28 @@ The response to a GetMap request is either a raster or vector file.
 
 
 
-
-
 NOTE: GIF is always 8 bits which can be used for limited bandwidth scenario, PNG can be eiter 8, 24 or 32 bits (depending on how it is configured).
-
-
 
 *Recommendation 1: If a service requires vector based graphical elements output, a DGIWG WMS server should provide image/svg+xml (Scalable Vector Graphics) for the GetMap operation.*
 
-
-
 NOTE: Users should be aware that only the output formats GIF and PNG support transparency.
-
-
 
 === Coordinate Systems
 
-
-
 The Web Map Service standard uses two principal classes of Coordinate Systems: a *Map CS* applicable to the map portrayal generated by the WMS, and a *Layer CRS* for a Bounding Box applied to the source data. During a portrayal operation, a WMS converts or transforms geographic information from a Layer CRS into a Map CS. In addition, a Layer may have an associated vertical, temporal or other coordinate system.
-
-
 
 ==== Map CS
 
-
-
 A Map CS is a coordinate reference system for a map produced by a WMS. A WMS map is a rectangular grid of pixels displayed on a computer screen (or a digital file that could be so displayed). The Map CS has a horizontal axis denoted i, and a vertical axis denoted j. i and j shall have only nonnegative integer values. The origin (i,j) =(0,0) is the pixel in the upper left corner of the map; i increases to the right and j increases downward.
-
-
 
 ==== Layer CRS
 
-
-
 A Layer CRS is a horizontal coordinate reference system for the geographic information that serves as the source for a map. A WMS must support at least one CRS, and maps from multiple servers may be overlaid only if all the selected servers support at least one CRS in common.
 
-
-
 ::
-
 *_Requirement 5: A DGIWG Basic WMS server shall support the following coordinate reference systems:_*
 
-
-
 * *_CRS:84 WGS84 geographic longitude, then latitude, expressed in decimal degrees_*
-
-
 
 * *_EPSG:4326 WGS84 geographic latitude, then longitude, expressed in decimal degrees_*
 
@@ -943,161 +708,81 @@ A Layer CRS is a horizontal coordinate reference system for the geographic infor
 
 
 
-
-
 Among the following Coordinate Reference Systems, the service shall support all those which validity zone overlaps data published by the service:
-
-
 
 * UTM projections over WGS84 (north zones)… EPSG:32601 to EPSG:32660
 
-
-
 * UTM projections over WGS84 (south zones)… EPSG:32701 to EPSG:32760
-
-
 
 * UPS projection over WGS84 (north zone)… EPSG: 5041
 
 * UPS projection over WGS84 (south zone)… EPSG: 5042
 
-
-
 Implementation guidance:
-
-
 
 *NOTE 1:* OGC provides implementation guidance about axis order http://www.ogcnetwork.net/axisorder.
 
-
-
 *NOTE 2:* Normative Reference 1, Section 7.2.4.6.6 states that: "Every named Layer shall have exactly one <EX_GeographicBoundingBox> element that is either stated explicitly or inherited from a parent Layer”. This is unclear in the base standard. Chapter 7.2.4.6.8 BoundingBox in the base standard states that: The <EX_GeographicBoundingBox> element (7.2.4.6.6) is conceptually similar to a BoundingBox in which the attribute CRS="CRS:84" is implicit. However, <EX_GeographicBoundingBox> shall not be used as a substitute for <BoundingBox CRS="CRS:84">. If the server wishes to provide bounding box information in the CRS:84 CRS, then a separate BoundingBox element explicitly naming CRS:84 shall be included in the service metadata.
-
-
 
 This means that Ex_GeographicBoundingBox within a DGIWG server shall always be in CRS="CRS:84".
 
-
-
 Some geographic information may be available at other dimensions like for instance elevation or time (3D / 4D). For example, in the case of elevation, atmospheric information like ozone concentrations, may be available at different altitudes. Similarly, geographic information may be available at multiple times, like hourly tidal information.
-
-
 
 *NOTE 3:* Appropriate vertical and temporal coordinate systems have to be defined in the context of the particular application.
 
-
-
 The verticalCRSid “CRS:88” refers to the vertical CRS defined in B.6 (elevation in meters in the North American Vertical Datum 1988). The unitSymbol “m” would be used. See Normative Reference 1, Annex C “Handling multi-dimensional data” for more information.
-
-
 
 === Request Parameter Rules
 
-
-
 Parameter names shall not be case sensitive, but parameter values shall be. Parameters in a request may be specified in any order.
-
-
 
 ==== Common Request Parameters
 
-
-
 There are three common request parameters:
-
-
 
 * *Version*: The VERSION parameter specifies the protocol version number.
 
-
-
 * *Request*: The REQUEST parameter indicates which service operation is being invoked.
-
-
 
 * *Format*: The FORMAT parameter specifies the output format of the response to an operation.
 
 
 
-
-
 ==== Exceptions
-
-
 
 The EXCEPTIONS request parameter states the format in which to report errors.
 
-
-
 ::
-
 *_Requirement 6: A DGIWG Basic WMS server shall provide service exceptions in English language._*
-
-
 
 *_NOTE 1:* English is justified in the context of coalitions such as NATO._
 
-
-
 *_NOTE 2:* This requirement applies for all provided operations by the server._
-
-
 
 ==== Extended capabilities and operations
 
-
-
 The Web Map Service allows for optional extended capabilities and operations. Extended capabilities or operations shall be defined when necessary by providing instances of the abstract <_ExtendedCapabilities> or <_ExtendedOperations> elements in the service metadata schema.
-
-
 
 ==  Operations
 
-
-
 The WMS Interface offers 3 Operations.
-
-
-
-
 
 • GetCapabilities (mandatory): Allows for obtaining Service Metadata
 
-
-
 • GetMap (mandatory): Returns a map
-
-
 
 • GetFeatureInfo (optional): Provides additional information about features in the pictures of maps that were returned by previous GetMap requests
 
 
-
-
-
 === GetCapabilities Operation Request
 
-
-
 The purpose of the mandatory GetCapabilities operation is to obtain service metadata, which is a machine readable (and human-readable) description of the server’s information content and acceptable request parameter values. Table 3 lists the GetCapabilities request parameters.
-
-
 
 [cols=",,",options="header",]
 
 |=======================================================================
 
-|*Request Parameter* a|
-
-*OGC*
-
-
-
-*Mandatory/Optional*
-
-
-
- |*Description*
+|*Request Parameter* a| *OGC* *Mandatory/Optional* |*Description*
 
 |*VERSION=version* |O |Request version
 
@@ -1112,48 +797,25 @@ The purpose of the mandatory GetCapabilities operation is to obtain service meta
 |=======================================================================
 
 
-
-
-
 {empty}[[_Ref363043970]]Table 3: The parameters of a GetCapabilities request URL as per Normative Reference [1]
-
-
-
 
 
 A DGIWG Basic WMS server supports all GetCapabilities parameters which can be in a GetCapabilities request.
 
-
-
 === GetCapabilities Operation Response
-
-
 
 When invoked on a WMS, the response to a GetCapabilities request shall be an XML document containing service metadata formatted according to the XML Schema in annex E.1 of the OGC WMS 1.3 standard Normative Reference [1].
 
-
-
 ==== Names and titles
-
-
 
 A number of elements have both a <Name> and a <Title>. The Name is a text string used for machine-to-machine communication while the Title is for the benefit of humans.
 
-
-
 ==== General service metadata
-
-
 
 The first part of the service metadata is a <Service> element providing general metadata for the server as a whole. It shall include a Name, Title, and Online Resource URL. Optional service metadata includes Abstract, Keyword List, Contact Information, Fees, Access Constraints, and limits the number of layers in a request or the output size of maps.
 
-
-
 ::
-
 *_Requirement 7: A DGIWG Basic WMS server shall provide all mandatory service metadata elements according to Table 4._*
-
-
 
 [cols=",,,",options="header",]
 
@@ -1167,29 +829,17 @@ The first part of the service metadata is a <Service> element providing general 
 
 The Title is for informative display to a human.
 
-
-
 For coalition interoperability an English title is mandatory.
 
-
-
 *NOTE*: For national use the title can be provided in the national language.
-
-
 
 |Abstract |O |M |
 
 See *_Requirement 9_*
 
-
-
 If the abstract element is provided in a coalition environment an English abstract is mandatory.
 
-
-
 *NOTE*: For national use the abstract can be provided in the national language.
-
-
 
 |KeywordList |O |M |List of keywords or keyword phrases to help catalog searching.
 
@@ -1211,131 +861,69 @@ If the abstract element is provided in a coalition environment an English abstra
 
 |================================================================================================================================================================================================================================================================
 
-
-
 [[_Ref477963119]]Table 4: GetCapabilities response – general service metadata
-
-
 
 The elements <Fees> and <AccessConstraints> may be omitted in an OGC WMS if they do not apply to the server. If either of those elements is present, the reserved word "none" (case-insensitive) has to be used if there are no fees or access constraints, as follows: <Fees>none</Fees>, <AccessConstraints>none</AccessConstraints>.
 
-
-
 ::
-
 *_Requirement 8: If content provided by a WMS server is classified, a DGIWG WMS server shall identify the highest classification level of the content accessible through the WMS service by populating the wms:AccessConstraints element._*
-
-
 
 In a DGIWG WMS server the AccessConstraints element has always to be used; depending on the context, applicable classification scheme has to be used. For example, in a NATO environment, the common NATO classification scheme has to be applied (see Normative Reference [3] DMF chapter 5.6.1.4 Classification Level Codelist).
 
-
-
 Testbed-12 OWS Common Security Extension ER  (https://portal.opengeospatial.org/files/?artifact_id=71729) provides guidance on how to advertise security constraints that apply to OGC Web Services and data.
-
-
 
 ==== Capability metadata
 
-
-
 The <Capability> element of the service metadata names the actual operations that are supported by the server, the output formats offered for those operations, and the URL prefix for each operation. The XML schema includes placeholders for Distributed Computing Platforms other than HTTP, but currently only the HTTP platform is defined.
-
-
 
 * *Layers and styles*: Each available map is advertised by a <Layer> element in the service metadata. A server shall include at least one <Layer> element for each map layer offered.
 
-
-
 * *Layer properties:* The <Layer> element can enclose child elements providing metadata about the Layer. The values of some of these elements can be inherited by subsidiary layers. The following metadata elements are available:
-
-
 
 ** *Title:* A <Title> is mandatory for all layers; it is a human-readable string for presentation in a menu. The Title is not inherited by child Layers.
 
-
-
 ** *Name*: If, and only if, a layer has a <Name>, then it is a map layer that can be requested by using that Name in the LAYERS parameter of a GetMap request. If the layer has a Title but no Name, then that layer is only a category title for all the layers nested within. A containing category itself may include a Name by which a map portraying all of the nested layers can be requested at once. For example, a parent layer "Roads" may have children “Interstates” and “State Highways” and allow the user to request either child individually or both together.
-
-
 
 ** The elements <**Abstract**> and <**KeywordList**> are optional in the base standard. Abstract is a narrative description of the map layer. KeywordList contains zero or more <Keyword> elements to aid in catalogue searches.
 
-
-
 ::
-
 *_Requirement 9: A DGIWG basic WMS server shall include the following information in the abstract element of the service metadata: "This service implements the DGIWG WMS 1.3 profile version 3.0, DGIWG Basic WMS conformance class (http://www.dgiwg.org/std/wms/3.0/conf/basic)."_*
 
 ::
-
 *_Requirement 10: A DGIWG WMS server shall_ provide a minimum keyword list based on the DGIM (DGIWG Geospatial Information Model) groups._*
-
-
 
 *NOTE 1*: Annex F presents groups and subgroups for DGIM 2016-2.0.
 
-
-
 *NOTE 2*: Additional keywords may be added to the list as appropriate to support data discovery.
-
-
 
 * Zero or more Styles may be advertised for a Layer or collection of layers using <Style> elements, each of which shall have <Name> and <Title> elements.
 
-
-
 ** The style's *Name* is used in the Map request STYLES parameter.
-
-
 
 ** The *Title* is a human-readable string. If only a single style is available, that style is known as the “default” style and need not be advertised by the server.
 
-
-
 ::
-
 *_Requirement 11: A DGIWG WMS server shall provide information (Name and Title) on the supported styles._*
 
 ::
-
 *_Requirement 12: A DGIWG WMS server shall always provide at least one style element and that style shall be advertised even if it's only the default style._*
-
-
 
 It is considered here that all layers (even raster, scanned maps or imagery data have a style). See below some examples:
 
-
-
 - in case of orthoimagerydata, this should be NAME: RGB, TITLE: RGB style for orthoimagery data
-
-
 
 - in case of a scanned paper map, this should be NAME: MGCP, TITLE: MGCP style for paper maps
 
-
-
 *_Requirement 13: The MaxWidth and MaxHeight shall be greater or equal to 800 pixels or omitted (meaning no constraint)._*
-
-
 
 When MaxWidth and MaxHeight are provided, that means that the client can request any image smaller than these two dimensions (this prevents requests for too big images). If not provided, there is no restriction for the size of the image requested.
 
-
-
 *<LegendURL> contains the location of an image of a map legend appropriate to the enclosing style.
 
-
-
 ::
-
 *_Requirement 14: Each layer's style shall have an associated legend if warranted, available as an image in one of the following formats: PNG, GIF or JPEG._*
 
-
-
 Following examples would require a legend:
-
-
 
 * Quantitative layers (for instance elevation, temperature …) would require a legend to better understand the content returned by the WMS service;
 
@@ -1343,149 +931,75 @@ Following examples would require a legend:
 
 * …
 
-
-
 Imagery data may not require legend to be properly understood.
 
-
-
 ::
-
 *_Requirement 15: This legend shall be accessible at the URL specified by LegendURL._*
-
-
 
 * *Scale denominators*: The <MinScaleDenominator> and <MaxScaleDenominator> elements define the range of scales for which it is appropriate to generate a map of a Layer.
 
-
-
 ::
-
 *_Requirement 16: When scale denominators are both specified, the <MinScaleDenominator> value shall always be less than or equal to the <MaxScaleDenominator> value._*
-
-
 
 *Recommendation 2: A DGIWG WMS service should be configured to serve requests that range from at least 4x to at least 0.25x the native scale(s) or resolution(s) of the underlying datasets".*
 
-
-
 *NOTE*: Users should be aware that changing the resolution at a range of 4 times to 0.25 times effects the accuracy of the displayed data significantly and will influence the usability of the data for certain use cases (e.g. measurements in the map).
 
-
-
 * *Sample dimensions:* Some geographic information may be available at other dimensions (for example, satellite images in different wavelength bands). The dimensions other than the four space-time dimensions are referred to as “sample dimensions. A DGIWG WMS server may allow for requesting a particular layer along one or more dimensional axes other than time or elevation.
-
-
 
 * *MetadataURL:* A server should use one or more <MetadataURL> elements to offer detailed, standardized metadata about the data corresponding to a particular layer. The “type” attribute indicates the standard to which the metadata complies. Two “type” attribute values are defined in ISO 19128:2005, "ISO 19115:2003" and “FGDC:1998”. The enclosed <Format> element indicates the file format MIME type of the metadata record.
 
 
 
-
-
 *Recommendation 3: In an SDI like architecture, a DGIWG WMS server should provide a link to the metadata resource via a resolvable URL for example to a CSW server.*
-
-
 
 * FeatureListURL: A server may use a <FeatureListURL> element to point to a list of the features represented in a Layer. The enclosed Format element indicates the file format MIME type of the feature list.
 
 ::
-
-
-
 *_Requirement 7: In the GetCapabilities, if any FeatureListURL element appears in a particular layer, then the list of features that are in the particular layer shall be resolvable._*
-
-
 
 * DataURL: A server may use DataURL to offer a link to the underlying data represented by a particular layer. The enclosed Format element indicates the file format MIME type of the data file.
 
-
-
 ::
-
 *_Requirement 18: In the GetCapabilities, if any DataURL element appears in a particular layer, then the underlying data of the particular layer shall be resolvable._*
 
-
-
 * *Layer attributes:* A <Layer> may have zero or more of the following XML attributes: queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight. All of these attributes are optional and default to 0. The meaning of each attribute is summarized in Table 54
-
-
 
 [cols=",,,",options="header",]
 
 |========================================================================================
 
-|*Attribute* a|
-
-*OGC*
-
-
-
-*allowed values*
-
-
-
- a|
-
-*DGIWG*
-
-
-
-*allowed values*
-
-
-
- |*Meaning (0 is default value)*
+|*Attribute* a| *OGC* *allowed values*  a| *DGIWG* *allowed values*  |*Meaning (0 is default value)*
 
 |*queryable* a|
 
 0, false,
 
-
-
 1, true
-
-
 
  a|
 
 0, false,
 
-
-
 1, true
-
-
 
  a|
 
 0, false: layer is not queryable.
 
-
-
 1, true: layer is queryable.
-
-
 
 |*cascaded* |0, positive integer |0, positive integer a|
 
 0: layer has not been retransmitted by a Cascading Map Server.
 
-
-
 n: layer has been retransmitted _n_ times.
-
-
 
 |*Opaque* a|
 
 0, false,
 
-
-
 1, true
-
-
 
  a|
 
@@ -1494,102 +1008,59 @@ n: layer has been retransmitted _n_ times.
 
 
 1, true
-
-
 
  a|
 
 0, false: map data represents vector features that probably do not completely fill space.
 
-
-
 1, true: map data are mostly or completely opaque.
-
-
 
 |*noSubsets* a|
 
 0, false,
 
-
-
 1, true
-
-
 
  |0, false, a|
 
 0, false: WMS can map a subset of the full bounding box.
 
-
-
 1, true: WMS can only map the entire bounding box.
-
-
 
 |*fixedWidth* |0, positive integer |0, a|
 
 0: WMS can produce map of arbitrary width.
 
-
-
 nonzero: value is fixed map width that cannot be changed by the WMS.
-
-
 
 |*fixedHeight* |0, positive integer |0, a|
 
 0: WMS can produce map of arbitrary height.
 
-
-
 nonzero: value is fixed map height that cannot be changed by the WMS.
-
-
 
 |========================================================================================
 
-
-
 [[_Ref363068298]]Table 5: Layer attributes
 
-
-
 ::
-
 *_Requirement 19: A DGIWG WMS server shall provide the Layer Attributes according to Table 5._*
-
-
 
 When set to a true value, *noSubsets* indicates that the server is not able to make a map of a geographic area other than the layer's bounding box.
 
-
-
 When present and nonzero, *fixedWidth* and *fixedHeight* indicate that the server is not able to produce a map of the layer at a width and height different from the fixed sizes indicated.
-
-
 
 According to Table 5 a DGIWG WMS server provides only subsettable (nosubsets=0) and resizable (fixedWidth=0 and fixedHeight=0) layers. As the 0 values are the default values, they do not have to be included explicitly for all layers.
 
-
-
 *_Recommendation 4: A DGIWG WMS server offering vector layers should be queryable._*
-
-
 
 The Layer metadata may also include three optional attributes that indicate a map server that is less functional than a normal WMS, because it is not able to extract a subset of a larger dataset or because it only serves maps of a fixed size and cannot resize them.
 
 
 
-
-
 ===  GetMap Operation Request
 
-
-
 The GetMap operation returns a map. Upon receiving a GetMap request, a WMS shall either satisfy the request or issue a service exception. Table 65 lists the parameters of a GetMap request.
-
-
 
 [cols="<,^,^,",options="header",]
 
@@ -1629,137 +1100,71 @@ The GetMap operation returns a map. Upon receiving a GetMap request, a WMS shall
 
 |================================================================================================================
 
-
-
 [[_Ref363158505]]Table 6: GetMap request parameters
-
-
 
 A DGIWG Basic WMS server support all GetMap request parameters.
 
-
-
 * *Styles:* The mandatory STYLES parameter lists the style in which each layer is to be rendered.
-
-
 
 * *Width, Height:* The mandatory WIDTH and HEIGHT parameters specify the size in integer pixels of the map to be produced.
 
-
-
 * *TRANSPARENT:* The optional TRANSPARENT parameter specifies whether the map background is to be made transparent or not. TRANSPARENT can take on two values, "TRUE" or "FALSE". The default value is FALSE if this parameter is absent from the request.
 
-
-
 ::
-
 *_Requirement 20: A DGIWG Basic WMS server shall support transparency._*
-
-
 
 * *EXCEPTIONS:* The optional EXCEPTIONS parameter defines the format of an error message. XML is mandatory and the default format for exceptions.
 
-
-
 ** INIMAGE: If the EXCEPTIONS parameter is set to INIMAGE, the WMS shall, upon detecting an error, return an object of the MIME type specified in the FORMAT parameter whose content includes text describing the nature of the error. In the case of a picture format, the error message shall be drawn on the returned picture. In the case of a graphic element format, the text of the error message shall be rendered in the manner that text is normally represented in that format.
 
-
-
 ::
-
 *_Requirement 21: A DGIWG WMS server shall support the INIMAGE EXCEPTIONS._*
 
-  
-
-* 
-
-
-
+::
 ** BLANK: If the EXCEPTIONS parameter is set to BLANK, the WMS shall, upon detecting an error, return an object of the type specified in FORMAT whose content is uniformly “off”. In the case of a picture format, that response shall be an image containing only pixels of one color (the background color). In the case of a picture format supporting transparency, if TRANSPARENT=TRUE is specified the pixels shall all be transparent. In the case of a graphic element output format, no visible graphic elements shall be included in the response output.
 
-
-
 ::
-
 *_Requirement 22: A DGIWG WMS server shall support the BLANK EXCEPTIONS._*
-
-
 
 * *Time, Elevation, Other sample dimensions:* An example would be the request for a single ozone map at specified time and height:
 
-
-
 Example
-
-
 
 http://ageobwserver.org/...?VERSION=1.3.0&REQUEST=GetMap&CRS=CRS:84&BBOX=-180,-90,180,90&WIDTH=600&HEIGHT=300&LAYERS=ozone&TIME=2000-08-03&ELEVATION=1000&FORMAT=image/gif[_http://ageobwserver.org/...?VERSION=1.3.0&REQUEST=GetMap&CRS=CRS:84&BBOX=-180,-90,180,90&WIDTH=600&HEIGHT=300&LAYERS=ozone&TIME=2000-08-03&ELEVATION=1000&FORMAT=image/gif_]
 
 
 
-
-
 *Recommendation 5: If a DGIWG Basic WMS server provides layers with an elevation parameter, it should support the vertical "ELEVATION" parameter. This parameter should be used in accordance with the "OGC Best Practices for using OGC WMS with Time-Dependent or Elevation-Dependent Data [2]".*
-
-
 
 *Recommendation 6: If a DGIWG Basic WMS server provides layers with an time parameter, it should support the temporal "time" parameter. This parameter should be used in accordance with the "OGC Best Practices for using OGC WMS with Time-Dependent or Elevation-Dependent Data [2]".*
 
-
-
 *NOTE:* Conformant WMS servers should express the values of the time dimension either as one time interval with non-zero resolution when the temporal dependency of the data is time instants or as a comma separated list of timestamps.
-
-
 
 The WMS 1.3 specification allows the possibility to define multiple times as several triplets: start/end/interval. The triplets define sets of time instants that may overlap. It is difficult for a human reader to determine the allowed times of the time dimension. Hence, the time dimension should not be specified as a list of triplets, except if the time instants are regularly spaced with a unique interval of time. If not the time instance should be specified as a comma separated list.
 
-
-
 *_Requirement 23: A DGIWG WMS server that announces available sample dimensions in its service metadata shall resolve the corresponding parameters provided in the GetMap operation for requesting these dimensional values._*
-
-
 
 Example
 
-
-
 _A WMS Layer is described as having an extent along a dimension named “wavelength” as follows:_
-
-
 
 _<Dimension name="wavelength" units="Angstrom" unitSymbol="Ao">3000,4000,5000,6000<Dimension>.A GetMap request for a portrayal of the data at 4000 Angstroms would include the parameter “DIM_WAVELENGTH=4000”."_
 
 
 
-
-
 === GetMap Response
-
-
 
 The response to a valid GetMap request is a map of the spatially referenced information layer requested, in the desired style, and having the specified coordinate reference system, bounding box, size, format and transparency.
 
-
-
 =  DGIWG Queryable WMS (normative)
-
-
 
 == Normative Requirements
 
-
-
 The Normative requirements requested by this conformance class are summarized in Table 7.
-
-
 
 Precondition to all requirements.
 
-
-
 *PRECONDITION 1: the environment has to provide the location identified by a URL which can be used by the WMS server to make artefacts available to clients. This precondition ensure that any URL provided by the server can be resolvable by the client*.
-
-
 
 [cols=",,",options="header",]
 
@@ -1777,19 +1182,11 @@ Precondition to all requirements.
 
 |============================================================================================================================================================================================================================================================================
 
-
-
 [[_Ref482885652]]Table 7: DGIWG Queryable WMS Normative Server Requirements
-
-
 
 == Non-Normative Recommendations for Implementation
 
-
-
 The non-normative requirements requested by this profile are summarized in Table 8.
-
-
 
 [cols=",,",options="header",]
 
@@ -1801,111 +1198,55 @@ The non-normative requirements requested by this profile are summarized in Table
 
 |===================================================================================================================================
 
-
-
 [[_Ref482885633]]Table 8: DGIWG WMS Profile Non-normative Recommendations for DGIWG Queryable WMS Server Implementation
-
-
 
 == Service Type
 
-
-
 The OGC WMS Implementation Specification defines two conformance classes, “Basic WMS” and “Queryable WMS”. A Basic WMS supports the GetCapabilities and GetMap operations (requests and responses); a Queryable WMS includes all Basic WMS operations and an additional GetFeatureInfo operation.
 
-
-
 ::
-
 *_Requirement 24: A DGIWG Queryable WMS server shall be compliant to the DGIWG WMS Basic and the Queryable WMS conformance classes._*
-
-
-
 
 
 According to this requirement a DGIWG WMS server shall support the GetCapabilities, GetMap and GetFeatureInfo operations. This requirement ensures compatibility with the base standard
 
-
-
 == Basic Service elements
-
-
 
 === Output Formats
 
-
-
 The response to a Web Map Service request is always a computer file. The file may contain text, or the file may represent a map image depending on the operation. For the particular operations a DGIWG WMS server shall support the following output formats.
-
-
 
 ==== Output formats for GetFeatureInfo requests
 
-
-
 The response to a GetFeatureInfo request is always a text file.
 
-
-
 ::
-
 *_Requirement 25: A DGIWG Queryable WMS server shall support text/xml and text/html as output format for the GetFeatureInfo operation._*
 
-
-
 == Operations
-
-
 
 === GetCapabilities Operation Response
 
 ::
-
-
-
 *_Requirement 26: A DGIWG WMS server shall include the following information in the abstract element of the service metadata: "This service implements the DGIWG WMS 1.3 profile version 3.0, DGIWG Queryable WMS conformance class (*__http://www.dgiwg.org/std/wms/3.0/conf/queryable)[http://www.dgiwg.org/std/wms/3.0/conf/queryable__*)*__]_*."_*
-
-
 
 *NOTE*: this requirement is in addition to requirement 9 that advertises for support of the DGIWG Basic conformance class. The two conformance classes are then advertises.
 
-
-
 === GetFeatureInfo Operation Request
-
-
 
 GetFeatureInfo is an optional operation. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. A client shall not issue a GetFeatureInfo request for other layers. A WMS shall respond with a properly formatted service exception (XML) response (code = OperationNotSupported) if it receives a GetFeatureInfo request but does not support it.
 
-
-
 The GetFeatureInfo operation is designed to provide clients of a WMS with more information about features in the pictures of maps that were returned by previous Map requests. The canonical use case for GetFeatureInfo is that a user sees the response of a Map request and chooses a point (I,J) on that map for which to obtain more information. The basic operation provides the ability for a client to specify which pixel is being asked about, which layer(s) should be investigated, and what format the information should be returned in.
-
-
 
 Because the WMS protocol is stateless, the GetFeatureInfo request indicates to the WMS what map the user is viewing by including most of the original GetMap request parameters (all but VERSION and REQUEST). From the spatial context information (BBOX, CRS, WIDTH, HEIGHT) in that GetMap request, along with the I,J position the user chose, the WMS can (possibly) return additional information about that position.
 
-
-
 The parameters of a GetFeatureInfo request are listed in .
-
-
 
 [cols=",,",options="header",]
 
 |==============================================================================================================================================================
 
-|*Request Parameter* a|
-
-*OGC*
-
-
-
-*Mandatory/ Optional*
-
-
-
- |*Description*
+|*Request Parameter* a| *OGC* *Mandatory/ Optional*  |*Description*
 
 |*VERSION=1.3.0* |M |Request version.
 
@@ -1927,75 +1268,39 @@ The parameters of a GetFeatureInfo request are listed in .
 
 |==============================================================================================================================================================
 
-
-
 [[_Toc488937754]]Table 9: GetFeatureInfo Request parameters
-
-
 
 A DGIWG Queryable WMS server supports all GetFeatureInfo request parameters.
 
-
-
 ==== Version
-
-
 
 The VERSION parameter is mandatory. The value “1.3.0” shall be used for GetFeatureInfo requests that comply with ISO 19128:2005.
 
-
-
 ==== Request
-
-
 
 The REQUEST parameter is mandatory. For GetFeatureInfo, the value “GetFeatureInfo” shall be used.
 
-
-
 ==== Map request part
-
-
 
 The mandatory “map request part” represents a sequence of parameters from the GetMap request that generated the original map. Two of the GetMap parameters are omitted because GetFeatureInfo provides its own values: VERSION and REQUEST. The remainder of the GetMap request shall be embedded contiguously in the GetFeatureInfo request.
 
-
-
 ==== Query_Layers
-
-
 
 The mandatory QUERY_LAYERS parameter states the map layer(s) from which feature information is desired to be retrieved. Its value is a comma-separated list of one or more map layers. This parameter shall contain at least one layer name, but may contain fewer layers than the original GetMap request. If any layer in the QUERY_LAYERS parameter is not defined in the service metadata of the WMS, the server shall issue a service exception (code = LayerNotDefined).
 
-
-
 ==== INFO_FORMAT
-
-
 
 The mandatory INFO_FORMAT parameter indicates what format to use when returning the feature information.
 
-
-
 ==== Feature_COUNT
-
-
 
 The optional FEATURE_COUNT parameter states the maximum number of features per layer for which feature information has to be returned. Its value is a positive integer. The default value is 1 if this parameter is omitted or is other than a positive integer.
 
-
-
 *NOTE*: Using a high value for the Feature_COUNT parameter may affect server performance. A server might restrict the number of features for which information is retrievable. This limitation has to be advertised in the capabilities document.
-
-
 
 ==== I, J
 
-
-
 The mandatory I and J request parameters are integers that indicate a point of interest on the map that was produced by the embedded GetMap request (the “map request part” described in 7.4.3.3). The point (I,J) is a point in the (i,j) space defined by the Map CS (see 6.7.2). Therefore:
-
-
 
 * the value of I shall be between 0 and the maximum value of the i axis;
 
@@ -2005,57 +1310,30 @@ The mandatory I and J request parameters are integers that indicate a point of i
 
 * I increases to the right and J increases downward.
 
-
-
 The point (I,J) represents the centre of the indicated pixel.
-
-
 
 If the value of I or of J is invalid, the server shall issue a service exception (code = InvalidPoint).
 
-
-
 ==== EXCEPTIONS
-
-
 
 The EXCEPTIONS parameter is optional. If this parameter is absent from the request, the default value is "XML". No other v alues are defined by ISO 19128:2005 for the WMS GetFeatureInfo request. Use of text/html is for the benefit of human readable content.
 
-
-
 ::
-
 *_Requirement 27: A DGIWG Queryable WMS server shall support XML for the EXCEPTIONS parameter of the GetFeatureInfo operation._*
-
-
 
 === GetFeatureInfo response
 
-
-
 The server shall return a response according to the requested INFO_FORMAT if the request is valid, or issue a service exception otherwise. The nature of the response is at the discretion of the service provider, but it shall pertain to the feature(s) nearest to (I,J).
-
-
 
 *Recommendation 7: A DGIWG Queryable WMS server should return the units of measure for dimensional values returned in a GetFeatureInfo response.*
 
-
-
 = Quality of Service
-
-
 
 Quality of service comprises requirements on all the aspects of a connection. A DGIWG WMS server should meet the following guidelines for performance, availability and capacity.
 
-
-
 == Non-Normative Recommendations for Implementation
 
-
-
 The non-normative requirements requested by this profile are summarized in Table 8.
-
-
 
 [cols=",,",options="header",]
 
@@ -2071,59 +1349,31 @@ The non-normative requirements requested by this profile are summarized in Table
 
 |==========================================================================================================================================================================
 
-
-
 [[_Toc488937755]]Table 10: DGIWG WMS Profile Non-normative Recommendations about quality for DGIWG WMS Server Implementation
-
-
 
 == Performance
 
-
-
 Recommendation 8: For a 470 Kilobytes image, the response time for sending the initial response to a Get Map Request to a view service shall be maximum 5 seconds in normal situation.
-
-
 
 *NOTE*: Normal situation represents periods out of peak load. It is set at 90% of the time.
 
-
-
 == Capacity
-
-
 
 Recommendation 9: The number of simultaneous service requests that a DGIWG WMS server should be able to support is at least 20 per second.
 
-
-
 == Availability
-
-
 
 Recommendation 10: A DGIWG WMS server should be available 99.9% of the time.
 
-
-
 *NOTE*: This relates to 10 minutes downtime per week, 0.73 hours per month and 8.73 hours per year.
-
-
 
 = Annex A – Abstract Test Suite
 
-
-
 *(Normative)*
-
-
 
 == DGIWG Basic WMS
 
-
-
 === DGIWG Service Type
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies all requirements for a OGC Basic WMS conformance class (DGIWG Requirement 1)
 
@@ -2133,15 +1383,9 @@ c.  References: Clauses 7.3
 
 d.  Test Type: Capability
 
-
-
 === DGIWG Basic Service elements
 
-
-
 ==== DGIWG WMS Binding
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server supports HTTP Get requests (DGIWG Requirement 2).
 
@@ -2149,119 +1393,65 @@ b.  Test Methods:
 
 1.  Submit HTTP Get GetCapabilities request and verify that the server is providing a proper response.
 
-
-
 2.  Submit HTTP Get GetMap request and verify that the server is providing a proper response.
-
-
 
 c.  References: Clauses 7.4.2
 
-
-
 d.  Test Type: Capability
 
-
-
 ==== DGIWG WMS language
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server content is in English (DGIWG Requirement 3).
 
 b.  Test Methods: Submit HTTP Get GetCapabilities (and GetFeatureInfo if supported) request and verify that text content of the response is in English language.
 
-c.  
-
-References: Clauses 7.4.3
-
-
+c.  References: Clauses 7.4.3
 
 d.  Test Type: Capability
 
-
-
 ==== DGIWG WMS Output format
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for supported outputs (DGIWG Requirement 4).
 
 b.  Test Method: Submit requests and verify that the server implements support for:
 
-
-
 1.  Submit a GetMap request (FORMAT = image/png) and verify that the response is image/png
-
-
 
 2.  Submit a GetMap request (FORMAT = image/gif) and verify that the response is image/gif
 
-
-
 3.  Submit a GetMap request (FORMAT = image/jpeg) and verify that the response is image/jpeg
-
-
 
 c.  References: Clauses 7.4.4
 
 d.  Test Type: Capability
 
-
-
 === DGIWG WMS CRS
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for handling CRS’s (DGIWG Requirement 5).
 
 b.  Test Method:
 
-
-
 1.  Submit requests and verify that all supported CRS are advertised for all available data in the XML response (Capabilities document) to a valid GetCapabilities request.
-
-
 
 2.  Submit GetMap requests and verify that maps are provided in the mandatory CRSs and the appropriate projections for each validity zone.
 
-
-
 c. References: Clauses 7.4.5
 
-
-
 d.  Test Type: Capability
-
-
 
 === DGIWG WMS Request Parameters - Exceptions
 
-
-
 a. Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for the exceptions request parameter rule (DGIWG Requirement 6).
-
-
 
 b. Test Method: Generate a sample of invalid requests from a client. Verify that the server provides an appropriate response in English.
 
-
-
 c.  References: Clauses 7.4.6.2
-
-
 
 d.  Test Type: Capability
 
-
-
 === DGIWG WMS Operations
 
-
-
 ==== DGIWG WMS GetCapabilites Response
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for a GetCapabilities operation request (DGIWG Requirements 7 -19).
 
@@ -2269,51 +1459,27 @@ b.  Test Method:
 
 1.  Submit a GetCapabilities request and verify that the response has all required service metadata elements.
 
-
-
 2.  Submit a GetCapabilities request and verify that the response uses <AccessContraints> to identify classification levels for the service.
-
-
 
 3.  Submit a GetCapabilities request and verify that the response in the Abstract element contains the following information: " shall include the following information in the abstract element of the service metadata: "This service implements the DGIWG WMS 1.3 profile version 3.0, DGIWG Basic WMS conformance class (http://www.dgiwg.org/std/wms/3.0/conf/basic)."
 
-
-
 4.  Submit a GetCapabilities request and verify that the response provides a keywordlist that is based on the DGIM groups.
-
-
 
 5. Submit a GetCapabilities request and verify that the response provides information (Name and Title) on the supported styles.
 
-
-
 6. Submit a GetCapabilities request and verify that the response provides a defined style for the default style.
-
-
 
 7. Submit a GetCapabilities request and verify that the values for MaxWidth and MaxHeight, when used, are greater than or equal to 800 pixels.
 
-
-
 8.  Submit a GetCapabilities request and verify that the response provides an associated legend in at least one of the following formats: PNG, GIF, JPEG.
-
-
 
 9.  Submit a GetCapabilities request and verify that the provided LegendURL is accessible.
 
-
-
 10. Submit a GetCapabilities request and verify that the provided <MinScaleDenominator> value is less than or equal to the <MaxScaleDenominator>.
-
-
 
 11. Submit a GetCapabilities request and verify that for all provided FeatureListURLs the list of features is resolvable through the provided URL.
 
-
-
 12. Submit a GetCapabilities request and verify that for all provided DatURLs the data is resolvable through the provided URL.
-
-
 
 13. Submit a GetCapabilities request and verify that all XML attributes for layers are provided according to Table 54.
 
@@ -2321,11 +1487,7 @@ c.  References: Clauses 7.5.2.3
 
 d.  Test Type: Capability
 
-
-
 ==== DGIWG WMS GetMap Request
-
-
 
 a.  Test Purpose: Verify that a basic WMS client satisfies all requirements for a GetMap request (DGIWG Requirements 20 - 23).
 
@@ -2333,35 +1495,19 @@ b.  Test Method:
 
 1.  Submit a GetMap request and verify support for transparency.
 
-
-
 2.  Submit a GetMap request and verify support for INIMAGE_EXCEPTIONS.
-
-
 
 3.  Submit a GetMap request and verify support for BLANK_EXCEPTIONS.
 
-
-
 4. Submit a GetMap request and verify that for WMS servers that advertise sample dimensions resolve corresponding parameters correctly.
-
-
 
 c.  References: Clauses 7.5.3
 
-
-
 d.  Test Type: Capability
-
-
 
 == DGIWG Queryable WMS
 
-
-
 === DGIWG WMS Basic
-
-
 
 a.  Test Purpose: Verify that a DGIWG Queryable WMS server satisfies all requirements for a DGIWG Basic WMS (DGIWG Requirement 1 to 23)
 
@@ -2369,19 +1515,11 @@ b.  Test Method: see Annex A.1
 
 c.  References: Clauses 7
 
-
-
 d.  Test Type: Capability
-
-
 
 *Note: Requirement 9 shall be replaced by corresponding requirement 26.*
 
-
-
 === DGIWG Service Type
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies all requirements for a OGC Queryable WMS conformance class (DGIWG *_Requirement 24_*)
 
@@ -2389,47 +1527,27 @@ b.  Test Method: Submit a GetFeatureInfo requests to the server and verify that 
 
 c.  References: Clauses 8.3
 
-
-
 d.  Test Type: Capability
-
-
 
 === DGIWG Basic Service elements
 
-
-
 ==== DGIWG WMS Output format
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies all the requirements for supported outputs (DGIWG Requirement 25).
 
 b.  Test Method: Submit requests and verify that the server implements support for:
 
-
-
-
-
 1.  Submit a GetFeatureInfo request (FORMAT = text/xml) and verify that the response is text/xml.
 
 2.  Submit a GetFeatureInfo request (FORMAT = text/html) and verify that the response is text/html.
-
-
 
 a.  References: Clauses 8.4.1
 
 b.  Test Type: Capability
 
-
-
 === DGIWG WMS operations
 
-
-
 ==== DGIWG WMS GetCapabilites Response
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies requirement 26.
 
@@ -2439,11 +1557,7 @@ c.  References: Clauses 8.5.1
 
 d.  Test Type: Capability
 
-
-
 ==== GetFeature Operation request
-
-
 
 a.  Test Purpose: Verify that a DGIWG WMS server satisfies requirement 27.
 
@@ -2453,15 +1567,9 @@ c.  References: Clauses 8.5.1.7
 
 d.  Test Type: Capability
 
-
-
 =  Annex B – Use cases
 
-
-
 *(Informative)*
-
-
 
 [cols=",,,",options="header",]
 
@@ -2516,8 +1624,6 @@ d.  Test Type: Capability
 |*Share or Export* |Unpublish from a Web Service |The Advanced User can unpublish GI from a web service which has been previously been published. |The ability to remove data from being published via the WMS.
 
 |============================================================================================================================================================================================================================================================================================================================================
-
-
 
 =  Annex C – Examples
 
