@@ -184,7 +184,7 @@ The WMS Implementation Specification defines two conformance classes, “Basic W
 
 The Basic WMS supports the mandatory GetCapabilities and GetMap operations (requests and responses) whereas the Queryable WMS supports all Basic WMS operations and the GetFeatureInfo operation.
 
-*Software implementations that claim to be conformant with the DGIWG WMS profile shall support the Basic WMS, as well as the specifically defined requirements in this document. *
+*Software implementations that claim to be conformant with the DGIWG WMS profile shall support the Basic WMS, as well as the specifically defined requirements in this document.*
 
 The DGIWG WMS profile is written in such a way that it references the different operations and parameters of the base standard and then defines specific requirements for software implementation.
 
